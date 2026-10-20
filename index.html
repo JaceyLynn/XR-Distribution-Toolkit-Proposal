@@ -389,10 +389,28 @@ section.s{display:grid;gap:18px}
 .sk-dot{display:inline-block;flex:none;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
 .sk-think{font-size:.76rem;font-style:italic;color:var(--muted);border-left:2px solid var(--accent);padding-left:8px}
 .sk-needs{display:grid;gap:0}
-.sk-need{display:grid;grid-template-columns:minmax(110px,1fr) auto auto;gap:6px 10px;align-items:center;font-size:.78rem;padding:6px 0;border-bottom:1px solid var(--line)}
+.sk-need{display:grid;grid-template-columns:minmax(110px,1fr) auto;gap:6px 10px;align-items:center;font-size:.78rem;padding:6px 0;border-bottom:1px solid var(--line)}
 .sk-need:last-child{border-bottom:0}
 .sk-need .cbx{font-size:.7rem;color:var(--muted)}
 .sk-empty{font-size:.78rem;color:var(--muted);display:grid;gap:4px}
+.sk-brief .sk-plan-items li{border-radius:3px;padding:0 3px;margin-left:-3px}
+.sk-brief .sk-plan-items li.sk-new{background:color-mix(in srgb,var(--accent) 16%,transparent);animation:sk-flash 2s ease-out forwards}
+@keyframes sk-flash{0%,40%{background:color-mix(in srgb,var(--accent) 22%,transparent)}100%{background:transparent}}
+@media (prefers-reduced-motion:reduce){.sk-brief .sk-plan-items li.sk-new{animation:none}}
+.sk-plan-empty{font-size:.7rem;color:var(--muted)}
+/* Brief panel: fixed to the height of the question column, scrolls inside */
+.sk-body>.sk-brief{display:flex;flex-direction:column;padding:0;gap:0;contain:size;min-height:440px;overflow:hidden}
+.sk-brief-scroll{flex:1 1 0;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:10px;display:grid;gap:4px;align-content:start}
+.sk-brief-foot{border-top:1px solid var(--line);padding:8px 10px 10px;display:grid;gap:4px}
+.sk-sec{border-bottom:1px solid var(--line);padding:4px 0}
+.sk-sec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--muted);padding:2px 0}
+.sk-sec>summary::-webkit-details-marker{display:none}
+.sk-sec>summary::before{content:"▸";font-family:var(--mono);font-size:.62rem;width:8px}
+.sk-sec[open]>summary::before{content:"▾"}
+.sk-sec .sk-n{margin-left:auto;font-family:var(--mono);font-size:.64rem}
+.sk-sec>summary:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.sk-sec .sk-plan-items{margin:2px 0 4px}
+@media (max-width:720px){.sk-body>.sk-brief{contain:none;min-height:0}.sk-brief-scroll{flex:none;max-height:300px}}
 .sk-empty b{color:var(--ink)}
 @media (max-width:720px){.sk-need{grid-template-columns:1fr}}
 /* Working together: two boxes, two-way arrows, shared layer, two entry routes */
@@ -958,10 +976,10 @@ if (jEl) {
       {id:'checks',short:'Checks and next actions',text:'What needs confirming with each shortlisted host?',kind:'checks',b:'need',opts:{pres:'Presentation: space, equipment, connectivity',labour:'Labour: who installs, runs, trains and troubleshoots',money:'Money: fee, freight, travel, insurance',aud:'Audience: discovery, onboarding, access',cont:'Continuity: documentation, maintenance, follow-up'},prompt:'Could this be repeated without unpaid or unsustainable labour?'}]}
   ];
   // An example project, so every step has something to look at. Everything can be changed.
-  const j={stage:-1, entry:'circ', qi:[0,0,0], open:null, skipped:false, plan:false, copied:false, more:0, showChk:false, seen:{}, ans:{
+  const j={stage:-1, entry:'circ', qi:[0,0,0], open:null, skipped:false, plan:false, copied:false, more:0, showChk:false, seen:{}, secOpen:new Set(['must','open']), ans:{
     aud:{v:['newxr','community'],t:'open',n:'People who rarely visit galleries'}, disc:{v:['visual'],t:'open',n:''},
     fmt:{v:['nh'],t:'must',n:''}, fdet:{v:['nh-set'],t:'must',n:''},
-    ess:{items:{set:{t:'ess',chk:false},space:{t:'ess',chk:true},lang:{t:'adapt',chk:false}},n:'About 5 × 4 m and strong internet'},
+    ess:{items:{set:{t:'ess'},space:{t:'ess'},lang:{t:'adapt'}},n:'About 5 × 4 m and strong internet'},
     welcome:{v:['onboard','guide'],t:'open',n:''}, ready:{v:['done'],t:'open',n:''}, purpose:{v:['meet'],t:'open',n:''},
     ctx:{v:['festival','venue'],t:'open',n:''}, region:{v:['Europe'],t:'open',n:''},
     obj:{v:['ongoing','tour'],t:'open',n:''}, hosts:{v:['xr','glam'],t:'open',n:''}, support:{v:['direct','tech'],t:'open',n:''},
@@ -988,33 +1006,58 @@ if (jEl) {
   const typeName=v=>HOSTS[v.type]||TYPE[v.type]||SUPT[(v.svc||[])[0]]||'';
   const tbc='<span><b>To confirm with them:</b> space and equipment, install support, fees</span>';
   function brief(){
-    const g={intent:[],must:[],open:[],und:[]}, ess={ess:[],adapt:[],und:[]}, check=[];
+    const g={intent:[],must:[],open:[],und:[]}, ess={ess:[],adapt:[],und:[]};
     allQs().forEach(q=>{ if(!done(q)||q.kind==='recs'||q.kind==='checks') return; const a=j.ans[q.id];
-      if(q.kind==='need'){ Object.entries(a.items).forEach(([k,it])=>{ ess[it.t].push(q.items[k]); if(it.chk) check.push(q.items[k]+(k==='space'&&a.n.trim()?` (${a.n.trim()})`:'')); }); return; }
+      if(q.kind==='need'){ Object.entries(a.items).forEach(([k,it])=>{ ess[it.t].push(q.items[k]+(k==='space'&&a.n.trim()?` (${a.n.trim()})`:'')); }); return; }
       const t=vtext(q,a); if(q.b==='refl') g.intent.push(`${q.short}: ${t}`); else g[q.noMust&&a.t==='must'?'open':a.t].push(`${q.short}: ${t}`); });
-    return {g,ess,check}; }
+    return {g,ess}; }
   function planText(){
-    const {g,ess,check}=brief(), sl=shortlist(), L=(h,a)=>`\n${h}\n${a.length?a.map(x=>'- '+x).join('\n'):'- nothing yet'}`;
+    const {g,ess}=brief(), sl=shortlist(), L=(h,a)=>`\n${h}\n${a.length?a.map(x=>'- '+x).join('\n'):'- nothing yet'}`;
     const cq=STAGES[2].qs.find(q=>q.id==='checks'), pq=STAGES[1].qs.find(q=>q.id==='prep');
     return `MY PLAN · XR Distribution Toolkit\nStarted from: ${ENTRY[j.entry][0]}${j.skipped?'\nFirst showing: skipped':''}\n`
       +L('INTENTIONS',g.intent)+'\n'+L('MUST FIT',g.must)+'\n'+L('OPEN TO ALTERNATIVES',g.open)+(g.und.length?'\n'+L('UNDECIDED',g.und):'')
       +'\n'+L('ESSENTIAL',ess.ess)+'\n'+L('ADAPTABLE',ess.adapt)
       +'\n'+L('SHORTLIST',sl.map(v=>`${v.name} (${v.city}). ${APPROACH[v.approach]}: ${v.web}`))
-      +'\n'+L('QUESTIONS FOR EACH HOST',[...check.map(x=>`Can you support: ${x}?`),...A('checks').v.map(k=>cq.opts[k])])
+      +'\n'+L('QUESTIONS FOR EACH HOST',A('checks').v.map(k=>cq.opts[k]))
       +(j.skipped?'':'\n'+L('TO PREPARE',A('prep').v.map(k=>pq.opts[k])))
       +`\n\nVenue data: Airtable export, October 2026. Missing information means “to confirm”, not unsuitable.`; }
   const lbl=t=>`<span style="font-size:.72rem;color:var(--muted)">${t}</span>`;
+  // The brief side panel. Rebuilt on every change; the item that just changed is highlighted.
+  // The brief side panel: collapsible sections that scroll inside a fixed height, shortlist and download pinned below.
+  // Rebuilt on every change; the section holding the change opens and the changed item is highlighted.
+  const SECS=[['intent','Intentions'],['must','Must fit'],['open','Open to alternatives'],['und','Still to decide'],['ess','Essential'],['adapt','Adaptable'],['hostq','Questions for hosts'],['prep','To prepare']];
+  const isNew=x=>!!j.changed&&(x.id===j.changed||x.id.split(':')[0]===j.changed);
+  function planHtml(){
+    const b=briefItems(), sl=shortlist(), fitN=results('circ').ok.length;
+    SECS.forEach(([k])=>{ if(b[k].some(isNew)) j.secOpen.add(k); });
+    const secs=SECS.filter(([k])=>b[k].length||['intent','must','open','ess','hostq'].includes(k)).map(([k,t])=>`<details class="sk-sec" data-sec="${k}"${j.secOpen.has(k)?' open':''}><summary>${t}<span class="sk-n">${b[k].length}</span></summary>${b[k].length?`<ul class="sk-plan-items">${b[k].map(x=>`<li data-q="${x.id}"${isNew(x)?' class="sk-new"':''}>${esc(x.text)}</li>`).join('')}</ul>`:'<span class="sk-plan-empty">Nothing yet</span>'}</details>`).join('');
+    return `<div class="sk-brief"><div class="sk-brief-scroll" aria-live="polite"><span class="eyebrow">Your brief</span>${secs}</div>
+      <div class="sk-brief-foot">${lbl('Shortlist')}<span style="font-size:.72rem">${sl.length?esc(sl.map(v=>v.name).join(', ')):'Nothing yet. Tap ☆ on a venue to add it.'}</span><span style="font-size:.7rem;color:var(--muted)">${fitN} recorded venues fit your brief</span><button class="chip k-ui" style="font-size:.72rem;border-color:var(--ink);justify-self:start" data-sk="j-plan" aria-expanded="${j.plan}">↓ Download plan</button></div></div>`; }
+  // Swap in a fresh brief, keeping the panel's scroll position and bringing the changed item into view.
+  function placeBrief(top){
+    const sc=jEl.querySelector('.sk-brief-scroll'); if(!sc) return; sc.scrollTop=top||0;
+    const n=sc.querySelector('.sk-new'); if(!n) return;
+    const r=n.getBoundingClientRect(), c=sc.getBoundingClientRect();
+    if(r.top<c.top) sc.scrollTop-=c.top-r.top+8; else if(r.bottom>c.bottom) sc.scrollTop+=r.bottom-c.bottom+8; }
+  const briefTop=()=>{ const sc=jEl.querySelector('.sk-brief-scroll'); return sc?sc.scrollTop:0; };
+  function briefItems(){
+    const o={intent:[],must:[],open:[],und:[],ess:[],adapt:[],hostq:[],prep:[]};
+    allQs().forEach(q=>{ const a=j.ans[q.id]; if(!a||q.kind==='recs') return;
+      if(q.kind==='need'){ Object.entries(a.items).forEach(([k,it])=>{ const t=q.items[k]+(k==='space'&&a.n.trim()?` (${a.n.trim()})`:''); if(it.t!=='und') o[it.t].push({id:'ess:'+k,text:t}); }); return; }
+      if(q.kind==='checks'){ a.v.forEach(v=>(q.id==='prep'?o.prep:o.hostq).push({id:q.id+':'+v,text:q.opts[v].split(':')[0]})); return; }
+      if(!done(q)) return;
+      const t=vtext(q,a), id=q.id; if(q.b==='refl') o.intent.push({id,text:t}); else o[q.noMust&&a.t==='must'?'open':a.t].push({id,text:t}); });
+    return o; }
   function render(){
+    try{ draw(); } finally { j.changed=null; } }
+  function draw(){
     const stc=(cur,sk,ok)=>cur?'background:var(--ink);color:var(--bg);border-color:var(--ink)':sk?'background:var(--surface);color:var(--muted);border-style:dashed':ok?'background:var(--format);color:#fff;border-color:var(--format)':'background:var(--surface);color:var(--muted)';
     const stB=(i,n,label,sub,style,cur)=>`<button class="st" data-sk="j-stage" data-i="${i}"><span class="st-c" style="${style}">${n}</span><span class="st-l"><b style="font-weight:${cur?700:400};color:${cur?'var(--ink)':'var(--muted)'}">${label}</b><span>${sub}</span></span></button>`;
     const steps=stB(-1,'↘','Start',j.stage===-1?'Current':'Change',stc(j.stage===-1,false,false),j.stage===-1)+'<span class="st-line done"></span>'
       +STAGES.map((s,i)=>{ const cur=j.stage===i, sk=i===1&&j.skipped, ok=s.qs.every(done);
         return stB(i,sk?'–':ok&&!cur?'✓':i+1,s.label,cur?'Current':sk?'Skipped · reopen':ok?'Done':`${s.qs.filter(done).length} of ${s.qs.length}`,stc(cur,sk,ok),cur)+`<span class="st-line ${ok?'done':''}"></span>`; }).join('')
       +stB(3,4,'Your plan',j.stage===3?'Current':'Any time',stc(j.stage===3,false,false),j.stage===3);
-    const {g,ess,check}=brief(), sl=shortlist(), cut=x=>x.length>44?x.slice(0,42).trim()+'…':x, ul=a=>a.length?`<ul class="sk-plan-items">${a.slice(0,3).map(x=>`<li>${esc(cut(x))}</li>`).join('')}${a.length>3?`<li style="list-style:none;color:var(--muted)">+ ${a.length-3} more in your plan</li>`:''}</ul>`:'<div class="faux" style="width:55%"></div>';
-    const fitN=results('circ').ok.length;
-    const plan=`<div><span class="eyebrow">Your brief</span>${lbl('Intentions')}${ul(g.intent.map(x=>x.split(': ').slice(1).join(': ')))}${lbl('Must fit')}${ul(g.must.map(x=>x.split(': ').slice(1).join(': ')))}${lbl('Open to alternatives')}${ul(g.open.map(x=>x.split(': ').slice(1).join(': ')))}${lbl('Essential')}${ul(ess.ess)}${lbl('To check with hosts')}${ul(check)}
-      ${lbl('Shortlist')}<span style="font-size:.72rem">${sl.length?esc(sl.map(v=>v.name).join(', ')):'Nothing yet. Tap ☆ on a venue to add it.'}</span><span style="font-size:.7rem;color:var(--muted)">${fitN} recorded venues fit your brief</span><button class="chip k-ui" style="font-size:.72rem;border-color:var(--ink);justify-self:start" data-sk="j-plan" aria-expanded="${j.plan}">↓ Download plan</button></div>`;
+    const plan=planHtml();
     let left, mid;
     if(j.stage===-1){
       left=`<div><span class="eyebrow">Start wherever you are</span><span style="font-size:.72rem;color:var(--muted)">You can leave questions undecided and come back to them. This one is filled in with an example project; change anything.</span></div>`;
@@ -1041,7 +1084,7 @@ if (jEl) {
           +(leads.length?`${lbl('Support organisations for the help you want · leads to look into, not confirmed availability')}<div class="sk-vlist">${leads.slice(0,3).map(v=>row(v,`${esc(v.svc.map(k=>SUPT[k]).join(', '))} · ${esc(v.city)}`)).join('')}</div>`:'')
           +(q.mode==='circ'?`<button class="chip k-ui" style="font-size:.74rem;justify-self:start;border-color:var(--accent);color:var(--accent)" data-sk="j-topw">Open these answers on the Pathway ↓</button>`:'');
       } else if(q.kind==='need'){
-        body=`${lbl('Add what applies. Mark each one, and tick when the venue has to confirm it.')}<div class="sk-needs">${Object.entries(q.items).map(([k,l])=>{ const it=a.items[k]; return `<div class="sk-need"><span>${esc(l)}</span><div class="seg" role="radiogroup" aria-label="${esc(l)}">${Object.entries(NTAG).map(([t,tl])=>`<button class="${it&&it.t===t?'on':''}" role="radio" aria-checked="${!!(it&&it.t===t)}" data-sk="j-ntag" data-item="${k}" data-t="${t}">${tl}</button>`).join('')}</div><button class="cbx ${it&&it.chk?'on':''}" role="checkbox" aria-checked="${!!(it&&it.chk)}" data-sk="j-nchk" data-item="${k}"><i></i>Check with host</button></div>`; }).join('')}</div>${note('ess','Production notes: size, power, internet, set-up time (optional)')}`;
+        body=`${lbl('Add what applies, and mark each one.')}<div class="sk-needs">${Object.entries(q.items).map(([k,l])=>{ const it=a.items[k]; return `<div class="sk-need"><span>${esc(l)}</span><div class="seg" role="radiogroup" aria-label="${esc(l)}">${Object.entries(NTAG).map(([t,tl])=>`<button class="${it&&it.t===t?'on':''}" role="radio" aria-checked="${!!(it&&it.t===t)}" data-sk="j-ntag" data-item="${k}" data-t="${t}">${tl}</button>`).join('')}</div></div>`; }).join('')}</div>${note('ess','Production notes: size, power, internet, set-up time (optional)')}`;
       } else if(q.kind==='checks'){
         body=`${lbl('Tick what applies. Each one goes into your plan.')}${btns(q.id,q.opts,'multi')}`;
       } else {
@@ -1058,11 +1101,13 @@ if (jEl) {
         <div class="q-actions"><button style="font-size:.74rem;color:var(--muted)" data-sk="j-prev">← Back</button><button class="btn-primary" data-sk="j-next">${nextLabel}</button></div>
         ${q.kase?`<div class="case-ref"><span class="eyebrow" style="margin:0">Related case · optional reading</span><a>${esc(q.kase)}</a></div>`:''}</div>`;
     }
+    const top=briefTop();
     jEl.innerHTML=`<div class="sk-bar" style="flex-direction:column;align-items:stretch;gap:8px"><div style="display:flex;align-items:center;gap:8px"><b style="font-family:var(--display)">XR Distribution Toolkit</b><span style="flex:1"></span>${tryTag}<span class="tab">Venues &amp; data</span><span class="tab">Case studies</span></div><nav class="stepper" aria-label="Journey steps">${steps}</nav></div>
       <div class="sk-body">${left}${mid}${plan}</div>
       ${j.plan?`<div class="sk-plan-box"><span class="eyebrow">Your plan, as it would download</span><pre>${esc(planText())}</pre><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="btn-primary" data-sk="j-copy">${j.copied?'Copied':'Copy plan'}</button><span style="font-size:.7rem;color:var(--muted)">In the real app this saves as a PDF or text file. Nothing is stored online.</span></div></div>`:''}`;
+    placeBrief(top);
   }
-  renders.push(render);
+  renders.push(()=>{ j.changed=null; render(); });
   const refocus=sel=>{ const b=jEl.querySelector(sel); if(b) b.focus(); };
   const go=(stage,qi)=>{ j.stage=stage; if(qi!=null) j.qi[stage]=qi; j.more=0; j.showChk=false; j.copied=false; render(); };
   Object.assign(handlers,{
@@ -1073,10 +1118,9 @@ if (jEl) {
     'j-ans':t=>{ const k=t.dataset.key, a=A(k), v=t.dataset.val, solo=['none','und','not'];
       if(t.dataset.kind==='multi'){ if(solo.includes(v)) a.v=a.v.includes(v)?[]:[v]; else { a.v=a.v.filter(x=>!solo.includes(x)); a.v=a.v.includes(v)?a.v.filter(x=>x!==v):[...a.v,v]; } } else a.v=a.v[0]===v?[]:[v];
       if(k==='fmt'){ const ok=subOpts(); A('fdet').v=A('fdet').v.filter(x=>ok[x]); }
-      render(); refocus(`[data-sk="j-ans"][data-key="${k}"][data-val="${v}"]`); },
-    'j-tag':t=>{ const k=t.dataset.key; A(k).t=t.dataset.t; if(k==='fmt') A('fdet').t=t.dataset.t; render(); refocus(`[data-sk="j-tag"][data-t="${t.dataset.t}"]`); },
-    'j-ntag':t=>{ const its=A('ess').items, k=t.dataset.item; if(its[k]&&its[k].t===t.dataset.t) delete its[k]; else its[k]={t:t.dataset.t,chk:its[k]?its[k].chk:false}; render(); refocus(`[data-sk="j-ntag"][data-item="${k}"][data-t="${t.dataset.t}"]`); },
-    'j-nchk':t=>{ const its=A('ess').items, k=t.dataset.item; its[k]=its[k]||{t:'und',chk:false}; its[k].chk=!its[k].chk; render(); refocus(`[data-sk="j-nchk"][data-item="${k}"]`); },
+      j.changed=k==='fdet'?'fmt':(k==='checks'||k==='prep')?k+':'+v:k; render(); refocus(`[data-sk="j-ans"][data-key="${k}"][data-val="${v}"]`); },
+    'j-tag':t=>{ const k=t.dataset.key; A(k).t=t.dataset.t; if(k==='fmt') A('fdet').t=t.dataset.t; j.changed=k; render(); refocus(`[data-sk="j-tag"][data-t="${t.dataset.t}"]`); },
+    'j-ntag':t=>{ const its=A('ess').items, k=t.dataset.item; if(its[k]&&its[k].t===t.dataset.t) delete its[k]; else its[k]={t:t.dataset.t}; j.changed='ess:'+k; render(); refocus(`[data-sk="j-ntag"][data-item="${k}"][data-t="${t.dataset.t}"]`); },
     'j-relax':t=>{ A(t.dataset.key).t='open'; if(t.dataset.key==='fmt') A('fdet').t='open'; render(); },
     'j-topw':()=>{ const pick=(k,f)=>A(k).t==='und'?[]:xs(f,k); if(bridge.toPathway) bridge.toPathway({discipline:pick('disc','disc'),type:pick('hosts','hosts'),fgroup:pick('fmt','fmt'),format:A('fmt').t==='und'?[]:xs('fdet','fdet'),region:pick('region','region')}); const t=document.getElementById('pathway'); if(t) t.scrollIntoView({behavior:RM?'auto':'smooth'}); },
     'j-chk':()=>{ j.showChk=!j.showChk; render(); },
@@ -1089,7 +1133,9 @@ if (jEl) {
     'j-copy':()=>{ const done2=()=>{ j.copied=true; render(); }; try{ navigator.clipboard.writeText(planText()).then(done2,()=>{ const p=jEl.querySelector('pre'); if(p){ const r=document.createRange(); r.selectNodeContents(p); const s=getSelection(); s.removeAllRanges(); s.addRange(r);} }); }catch(e){} }
   });
   jEl.addEventListener('input',e=>{ const id=e.target.dataset.skn; if(!id) return; A(id).n=e.target.value;
+    j.changed=id==='ess'?'ess:space':id; const bp=jEl.querySelector('.sk-brief'); if(bp){ const top=briefTop(); bp.outerHTML=planHtml(); placeBrief(top); }
     clearTimeout(jEl._t); jEl._t=setTimeout(()=>{ const pos=e.target.selectionStart; render(); const ta=document.getElementById('sk-note-'+id); if(ta){ ta.focus(); ta.setSelectionRange(pos,pos); } },700); });
+  jEl.addEventListener('toggle',e=>{ const k=e.target.dataset&&e.target.dataset.sec; if(k) e.target.open?j.secOpen.add(k):j.secOpen.delete(k); },true);
   jEl.classList.add('live-sk'); jEl.setAttribute('role','group');
   render();
 }
