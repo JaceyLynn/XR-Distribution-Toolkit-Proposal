@@ -6,6 +6,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,400..700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Unbounded:wght@500;700&family=Instrument+Serif:ital@0;1&family=Martian+Mono:wdth,wght@75,500;75,700&family=Montserrat:wght@400;600&family=Sora:wght@400;600&family=Outfit:wght@300;400;600;700&family=Quicksand:wght@400;500;600&family=Work+Sans:wght@400;500;700&display=swap">
 <style>
 /* Layout: a single reading column of four option "plates"; each plate pairs a sitemap tree with flow lanes. Node colours reuse the Kumu diagram's legend. */
 :root{
@@ -441,6 +442,7 @@ section.s{display:grid;gap:18px}
 .tg-ways .eyebrow{grid-column:1/-1}
 .tw{display:contents}
 .tw b{font-size:.92rem}
+.tw b small{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
 .tw ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 0;font-size:.86rem}
 .tw li{display:flex;align-items:center}
 .tw li+li::before{content:"→";color:var(--accent);padding:0 8px;font-family:var(--mono)}
@@ -477,6 +479,7 @@ footer{border-top:1px solid var(--line);padding-top:14px}
     <a href="#journey">1 · Guided journey</a>
     <a href="#pathway">2 · Pathway</a>
     <a href="#together">How they can work together</a>
+    <a href="#themes">Style themes</a>
   </nav>
 </header>
 
@@ -520,9 +523,9 @@ footer{border-top:1px solid var(--line);padding-top:14px}
         <div class="take"><span>Takeaway</span>Distribution brief</div>
       </div>
       <div class="ph opt">
-        <span class="enter">I'm planning a first showing</span>
-        <h3><span class="pn">2</span>First showing<small>optional</small></h3>
-        <p class="aq">What should the first showing achieve?</p>
+        <span class="enter">I'm planning a premiere</span>
+        <h3><span class="pn">2</span>Premiere<small>optional</small></h3>
+        <p class="aq">What should the premiere achieve?</p>
         <ol class="tl">
           <li class="jr">Readiness</li>
           <li class="jr">Purpose</li>
@@ -531,7 +534,7 @@ footer{border-top:1px solid var(--line);padding-top:14px}
           <li class="jc">Candidates and feasibility</li>
           <li class="jc">Preparation</li>
         </ol>
-        <div class="take"><span>Takeaway</span>First-showing shortlist and preparation</div>
+        <div class="take"><span>Takeaway</span>Premiere shortlist and preparation</div>
       </div>
       <div class="ph">
         <span class="enter">I'm looking for the next place</span>
@@ -588,14 +591,14 @@ footer{border-top:1px solid var(--line);padding-top:14px}
 
 <section class="s" id="together">
   <h2>How they can work together</h2>
-  <p class="one">Two ways into one toolkit. Both use the same venue records, the same shortlist and the same plan.</p>
+  <p class="one">Two features in one toolkit: develop a distribution plan, or skip the questions and go straight to a list of venues. Both use the same venue records and the same shortlist.</p>
   <div class="tg" role="group" aria-label="How the guided journey and the pathway can work together">
-    <a class="tg-box tj" href="#journey"><span class="tg-k">1 · Guided journey</span><b>Think it through</b><span>Answers build a brief</span></a>
+    <a class="tg-box tj" href="#journey"><span class="tg-k">1 · Guided journey</span><b>Develop a distribution plan</b><span>Questions build a brief, then a plan</span></a>
     <div class="tg-mid" aria-hidden="true">
       <div class="tg-ar fw"><span>Answers open on the Pathway as filters</span></div>
       <div class="tg-ar bw"><span>Starred venues go into the plan</span></div>
     </div>
-    <a class="tg-box tp" href="#pathway"><span class="tg-k">2 · Pathway</span><b>See what fits</b><span>Filters show matching venues</span></a>
+    <a class="tg-box tp" href="#pathway"><span class="tg-k">2 · Pathway</span><b>Get a list of venues</b><span>Filters show the venues that fit</span></a>
     <div class="tg-shared">
       <span class="tg-k">Shared by both</span>
       <div class="tg-row"><span>Venue records from the Airtable</span><span>One shortlist ☆</span><span class="pl">One plan to download</span></div>
@@ -603,11 +606,652 @@ footer{border-top:1px solid var(--line);padding-top:14px}
   </div>
   <div class="tg-ways">
     <span class="eyebrow">Two ways in</span>
-    <div class="tw"><b>Have a project</b><ol><li>Guided journey</li><li>Circulate: open answers on the Pathway</li><li>Star venues</li><li>Download the plan</li></ol></div>
-    <div class="tw"><b>No project yet</b><ol><li>Pathway</li><li>Star venues</li><li>Guided journey to plan around them</li><li>Download the plan</li></ol></div>
+    <div class="tw"><b>Want to plan distribution</b><ol><li>Guided journey: Develop, Premiere, Circulate</li><li>See what fits on the Pathway</li><li>Star venues</li><li>Download the plan</li></ol></div>
+    <div class="tw"><b>Already thought it through<small>for example, an experienced XR artist</small></b><ol><li>Skip the questions</li><li>Pathway: pick your filters</li><li>Star venues</li><li>Download the shortlist</li></ol></div>
   </div>
   <p class="try">Try it in the prototype above: in Circulate, go to “Explore and shortlist” and press “Open these answers on the Pathway”.</p>
 </section>
+
+<section class="s" id="themes">
+  <h2>Style themes</h2>
+  <p class="one">Three directions on the same screen, the Guided journey at Circulate question 4, each shown in light and dark. The screen content is not the final version; it is only here to show each style.</p>
+  <div id="st-host"></div>
+</section>
+<template id="st-tpl"><style>*{box-sizing:border-box}
+:host{display:block;color:var(--fg);font:15px/1.55 var(--f-ui);font-stretch:normal}
+.wrap{display:grid;gap:40px}
+h1,h2,h3{text-wrap:balance;margin:0}
+a{color:var(--accent)}
+.eyebrow{font:500 12px/1.2 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header.top{display:grid;gap:12px;max-width:68ch}
+header.top h1{font:700 clamp(28px,4vw,40px)/1.1 var(--f-ui);letter-spacing:-.01em}
+header.top p{margin:0;color:var(--muted)}
+.note{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:12px;font-size:14px;color:var(--muted);max-width:80ch;margin:0}
+.note strong{color:var(--fg)}
+
+.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cmp{display:grid;gap:10px;align-content:start;padding-top:14px;border-top:1px solid var(--line)}
+.cmp h3{font:600 17px/1.3 var(--f-ui)}
+.cmp p{margin:0;font-size:14px;color:var(--muted)}
+.strip{display:flex;height:34px;border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.strip span{flex:1}
+a.cmp{color:inherit;text-decoration:none}
+a.cmp:hover h3{text-decoration:underline}
+
+.theme{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;padding-top:28px;border-top:1px solid var(--line)}
+.spec{display:grid;gap:26px 40px;align-content:start;grid-template-columns:repeat(2,minmax(0,1fr))}
+.spec ul.els{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+@media (max-width:860px){ .spec{grid-template-columns:minmax(0,1fr)} }
+.spec > div{display:grid;gap:8px;align-content:start}
+.spec h2{font:700 26px/1.15 var(--f-ui)}
+.spec p{margin:0;font-size:15px}
+.spec .label{font:500 12px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.sw div{display:grid;gap:4px;font:400 11px/1.3 var(--f-mono);color:var(--muted)}
+.sw i{display:block;height:36px;border-radius:3px;border:1px solid var(--line)}
+.sw b{font-weight:500;color:var(--fg)}
+.modes{display:grid;gap:20px;min-width:0}
+.screen{border:1px solid var(--line);border-radius:8px;overflow:hidden;min-width:0;align-self:start}
+.screen .cap{font:400 11px var(--f-mono);color:var(--muted);padding:6px 12px;border-top:1px solid var(--line);background:var(--bg)}
+/* each screen is shown twice: forced light and forced dark */
+.mode-light{
+  --a-bg:#ffffff; --a-fg:#141416; --a-muted:#5f5f66; --a-rule:#141416; --a-line:#d3d2cc; --a-accent:#c4311a;
+  --a-coral:#ff5a4e; --a-sun:#ffc23a; --a-violet:#6a4cff; --a-sky:#3aa8f5; --a-mint:#2fc48f; --a-pink:#ff6fcf; --a-cta:#ff4f3f; --a-cta-fg:#ffffff; --a-edge:#ffffff; --a-swipe:50%;
+  --b-bg:#cdeae3; --b-bg2:#a8b6ea; --b-fg:#1d1b4a; --b-muted:#3f4675; --b-surface:#ffffff; --b-surface2:#eceeff; --b-edge:rgba(29,27,74,.12); --b-body:#1d1b4a;
+  --b-card:#f5f4ff; --b-card-fg:#22186e; --b-fg2:#22186e; --b-body0:#2a1fa8; --b-lilac0:#c9c4ff; --b-orchid0:#ff7a8a; --b-blue0:#4a3aff; --b-peri0:#4a3aff; --b-coral:#ff7a8a; --b-peach:#ffb48c; --b-mint0:#b8f7cf; --b-violet:#5546f5; --b-coral-ink:#d23a5c;
+  --b-orchid:#b05ce8; --b-peri:#5252e6; --b-mint:#22d3a6; --b-lilac:#cdb8f5; --b-blue:#2f6fe0; --b-white:#f4f3ff; --b-ink-on:#1d1b4a; --b-glow:rgba(29,27,74,.22);
+  --c-bg:#faf9f8; --c-fg:#150811; --c-muted:#623b70; --c-line:#d9d4e2; --c-tint:#efecf3; --c-mid:#beb8cd; --c-strong:#531745; --c-p1:#beb8cd; --c-p2:#aaaaff; --c-p3:#623b70; --c-p4:#531745; --c-pop:#aaaaff; --c-pop-fg:#150811; --c-mesh:#e4e0ea; --c-bub:#531745; --c-bub-fg:#faf9f8;
+  color-scheme:light}
+.mode-dark{
+  --a-bg:#161618; --a-fg:#efeff1; --a-muted:#a2a2aa; --a-rule:#e4e4e8; --a-line:#36363c; --a-accent:#ff7a6e;
+  --a-coral:#ff6a5e; --a-sun:#ffcc4d; --a-violet:#9a85ff; --a-sky:#55b8ff; --a-mint:#4fe3b0; --a-pink:#ff86d8; --a-cta:#ff5a4a; --a-cta-fg:#ffffff; --a-edge:#f5f4f0; --a-swipe:82%;
+  --b-bg:#1d1b4a; --b-bg2:#123a52; --b-fg:#f3f2ff; --b-muted:#c3c4ea; --b-surface:#2b2870; --b-surface2:#363395; --b-edge:rgba(255,255,255,.12); --b-body:#14123a;
+  --b-orchid:#c77dff; --b-peri:#8080ff; --b-mint:#2fe0b8; --b-lilac:#d9c8ff; --b-blue:#5b9bff; --b-white:#f3f2ff; --b-ink-on:#1d1b4a; --b-glow:rgba(5,5,25,.5);
+  --c-bg:#150811; --c-fg:#faf9f8; --c-muted:#beb8cd; --c-line:#3a2440; --c-tint:#22111f; --c-mid:#623b70; --c-strong:#aaaaff; --c-p1:#beb8cd; --c-p2:#aaaaff; --c-p3:#623b70; --c-p4:#531745; --c-pop:#aaaaff; --c-pop-fg:#150811; --c-mesh:#2a1528; --c-bub:#623b70; --c-bub-fg:#faf9f8;
+  color-scheme:dark}
+.star{width:18px;height:18px;flex:none;fill:none}
+
+/* ---------- Shared journey screen structure (same layout as the page's Guided journey sketch) ---------- */
+.scr{position:relative;overflow:hidden;isolation:isolate;font-size:13px;line-height:1.45}
+.scr h6{margin:0 0 8px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.scr .s-head{position:relative;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 14px 8px}
+.scr .s-logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.scr .s-nav{display:flex;gap:6px;flex-wrap:wrap;font-size:11px}
+.scr .s-nav span{padding:4px 9px}
+.scr .s-steps{position:relative;list-style:none;margin:0;padding:6px 14px 10px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.scr .s-steps li{display:flex;gap:7px;align-items:center;font-size:12px;font-weight:600;min-width:0}
+.scr .s-steps li > i{flex:none;width:22px;height:22px;display:grid;place-items:center;font-style:normal;font-size:11px}
+.scr .s-steps small{display:block;font-weight:400;font-size:10px}
+.scr .s-body{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,2.2fr) minmax(0,1fr);gap:12px;padding:0 14px 14px}
+.scr .s-qs ul{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:5px}
+.scr .s-qs li{padding:5px 8px;font-size:11.5px}
+.scr .s-qs li.ok::before{content:"✓ "}
+.scr .s-link{font-size:11.5px}
+.scr .s-q h5{margin:0 0 4px;font-size:16px;line-height:1.2}
+.scr .s-q > p{margin:0 0 10px;font-size:11.5px}
+.scr .s-opts{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.scr .s-opts li{display:flex;gap:9px;align-items:center;padding:7px 10px;font-size:12px}
+.scr .s-opts li > i{flex:none;width:13px;height:13px}
+.scr .s-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.scr .s-cta{font-size:12px;font-weight:600;padding:6px 12px}
+.scr .s-plan dl{margin:0;display:grid;gap:3px;font-size:11.5px}
+.scr .s-plan dt{margin-top:6px;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+.scr .s-plan dd{margin:0;display:flex;flex-wrap:wrap;gap:4px}
+.scr .s-plan dd.sl{display:block}
+.scr .s-plan dd.sl small{display:block;font-size:10.5px}
+.scr .s-plan .tag{padding:1px 7px;font-size:11px}
+.scr .s-dl{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:600;padding:5px 10px}
+@media (max-width:620px){ .scr .s-body{grid-template-columns:minmax(0,1fr)} .scr .s-steps{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+/* ---------- Theme A: Notebook (Jacie's Figma tweak: white page, ruled grid, colourful hand-drawn marks, coral action) ---------- */
+.ta{background:var(--a-bg);color:var(--a-fg);font-family:"Montserrat",sans-serif}
+.ta svg.hd{overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.ta h6,.ta .lab{font-family:"Martian Mono",monospace;font-stretch:75%;font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--a-fg)}
+.ta .s-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px 14px;border-bottom:1px solid var(--a-rule)}
+.ta .s-logo{font:600 20px/1.1 "Bricolage Grotesque",sans-serif;text-transform:uppercase;letter-spacing:-.005em}
+.ta .s-nav{display:flex;gap:clamp(20px,5vw,56px)}
+.ta .s-nav span{padding:0;position:relative}
+.ta .s-nav .s-try .hd{position:absolute;left:-2px;bottom:-8px;width:calc(100% + 4px);height:6px;stroke:var(--a-cta);stroke-width:2}
+.ta .s-steps{display:grid;grid-template-columns:23.2% 25.4% 25.4% minmax(0,1fr);gap:0;padding:0;margin:0;border-bottom:1px solid var(--a-rule)}
+.ta .s-steps li{display:flex;gap:12px;align-items:center;padding:14px 18px;border-left:1px solid var(--a-rule);font:700 10px/1.3 "Martian Mono",monospace;font-stretch:75%;letter-spacing:.06em;text-transform:uppercase}
+.ta .s-steps li:first-child{border-left:0;padding-left:20px}
+.ta .s-steps li > i{position:relative;width:28px;height:28px;font:700 11px "Martian Mono",monospace;font-stretch:75%}
+.ta .s-steps li > i .hd{position:absolute;inset:0;width:100%;height:100%;stroke-width:1.5}
+.ta .s-steps li > i b{position:relative}
+.ta .s-steps small{font:400 10.5px "Montserrat",sans-serif;letter-spacing:0;text-transform:none;color:var(--a-muted);margin-top:2px}
+.ta .s-steps li.done .hd{stroke:var(--a-mint)} .ta .s-steps li.done .hd .ck{stroke:var(--a-fg);stroke-width:1.8}
+.ta .s-steps li.skip,.ta .s-steps li.next{color:var(--a-muted)}
+.ta .s-steps li.skip .hd{stroke:var(--a-muted);stroke-dasharray:3 3}
+.ta .s-steps li.cur .hd{fill:var(--a-cta);stroke:var(--a-cta)}
+.ta .s-steps li.cur > i{color:var(--a-cta-fg)}
+.ta .s-body{display:grid;grid-template-columns:23.2% minmax(0,1fr) 26%;gap:0;padding:0}
+.ta .s-qs,.ta .s-plan{display:flex;flex-direction:column}
+.ta .s-qs .top{padding:18px 18px 18px 20px}
+.ta .s-qs .bot{margin-top:auto;border-top:1px solid var(--a-rule);padding:16px 18px 18px 20px}
+.ta .s-qs ul{gap:0;margin:8px 0 0}
+.ta .s-qs li{padding:6px 0;font-size:12.5px;position:relative}
+.ta .s-qs li.ok{color:var(--a-muted)} .ta .s-qs li.ok::before{content:"✓  "}
+.ta .s-qs li.on{font-weight:600;justify-self:start;padding-right:4px}
+.ta .ring{position:absolute;left:-12px;top:-5px;width:calc(100% + 22px);height:calc(100% + 10px);stroke:var(--a-cta);stroke-width:1.4}
+.ta .s-link{color:var(--a-fg);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.ta .key{display:grid;gap:4px;margin:0 0 14px;font-size:10.5px;color:var(--a-muted)} .ta .key span{display:flex;gap:6px;align-items:center} .ta .key i{width:14px;height:4px;border-radius:2px;background:var(--k)}
+.ta .s-q{border-left:1px solid var(--a-rule);border-right:1px solid var(--a-rule);padding:18px 18px 20px}
+.ta .s-q h6{color:var(--a-muted);display:flex;gap:10px;align-items:center}
+.ta .qtype,.ta .s-plan dt{color:var(--a-fg);padding:0 3px;background:linear-gradient(transparent var(--a-swipe),var(--qt) var(--a-swipe),var(--qt) 96%,transparent 96%)}
+.ta .s-q h5{font:500 30px/1.06 "Bricolage Grotesque",sans-serif;letter-spacing:-.025em;margin:8px 0 10px}
+.ta .s-q h5 .plus{color:var(--a-sun)}
+.ta .s-q > p{color:var(--a-muted);margin-bottom:16px}
+.ta .s-opts{gap:0;border-bottom:1px solid var(--a-line)}
+.ta .s-opts li{border-top:1px solid var(--a-line);padding:10px 0;font-size:12.5px}
+.ta .s-opts li > i{position:relative;width:13px;height:13px;border:1px solid var(--a-fg)}
+.ta .s-opts li.sel > i{background:var(--a-muted)}
+.ta .s-opts li > i .hd{position:absolute;left:-2px;top:-7px;width:20px;height:18px;stroke:var(--tick,var(--a-sun));stroke-width:2.2}
+.ta .s-opts li.sel{font-weight:600}
+.ta .s-foot{margin-top:22px;justify-content:flex-end}
+.ta .s-cta{position:relative;background:var(--a-cta);color:var(--a-cta-fg);font-weight:700;padding:10px 18px;clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%)}
+.ta .s-cta::after{content:"";position:absolute;right:0;bottom:0;width:12px;height:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--a-cta) 65%,#000 35%) 50%,transparent 50%)}
+.ta .s-plan h6{margin:0;padding:18px 20px 10px 18px;border-bottom:1px solid var(--a-rule)}
+.ta .s-plan .list{padding:4px 20px 18px 18px}
+.ta .s-plan .short{margin-top:auto;border-top:1px solid var(--a-rule);padding:16px 20px 18px 18px}
+.ta .s-plan dl{gap:0}
+.ta .s-plan dt{margin-top:12px;font:700 10px "Martian Mono",monospace;font-stretch:75%;letter-spacing:.06em;justify-self:start;margin-left:-3px}
+.ta .s-plan dd{display:grid;gap:2px;margin-top:3px}
+.ta .s-plan .tag{padding:0;font-size:12.5px;display:flex;justify-content:space-between;gap:8px}
+.ta .s-plan .tag::after{content:"×";font-weight:300;font-size:15px;line-height:1;color:var(--a-muted)}
+.ta .s-plan dd.q{font-size:12px}
+.ta .sl{display:flex;align-items:center;gap:12px;margin-top:8px}
+.ta .sl small{display:block;color:var(--a-muted);font-size:10.5px;margin-top:3px}
+.ta .short .qtype{font:700 10px "Martian Mono",monospace;font-stretch:75%;letter-spacing:.06em;text-transform:uppercase;margin-left:-3px}
+.ta .count{position:relative;width:76px;height:76px;flex:none;display:grid;place-items:center;font:500 38px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.ta .count svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--a-pink);stroke-width:1.6}
+@media (max-width:620px){ .ta .s-head{flex-direction:column;align-items:flex-start} .ta .s-steps{grid-template-columns:repeat(2,minmax(0,1fr))} .ta .s-steps li{border-top:1px solid var(--a-rule)} .ta .s-steps li:nth-child(odd){border-left:0;padding-left:20px} .ta .s-body{grid-template-columns:minmax(0,1fr)} .ta .s-q{border:0;border-block:1px solid var(--a-rule);padding-inline:20px} }
+
+/* ---------- Theme B: Grain (Jacie's Figma Frame 4: sticker cards on a grainy purple noise gradient, glass question panel) ---------- */
+.tb{background:#5546f5;color:var(--b-fg2);font-family:"Outfit",sans-serif;padding:16px 14px}
+.tb .grain{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.1 -0.62'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='1' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .06  0 0 0 0 .05  0 0 0 0 .16  0 0 0 2.2 -1'/></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>"),
+   radial-gradient(28% 48% at 6% 2%,#ff8a9c 0%,rgba(255,138,156,.55) 40%,rgba(255,138,156,0) 100%),
+   radial-gradient(34% 55% at 92% 4%,#9d92ff 0%,rgba(157,146,255,0) 100%),
+   radial-gradient(45% 60% at 45% 50%,#6a5cff 0%,rgba(106,92,255,0) 100%),
+   radial-gradient(30% 45% at 86% 92%,rgba(184,247,207,.85) 0%,rgba(184,247,207,0) 100%),
+   radial-gradient(55% 60% at 18% 100%,#3a2be0 0%,rgba(58,43,224,0) 100%),#5546f5;
+  background-size:240px 240px,200px 200px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,auto}
+/* morphing, merging colour blobs drift under the grain */
+.tb .grain{overflow:hidden}
+.tb .grain i{position:absolute;display:block;width:46%;aspect-ratio:1;filter:blur(38px);opacity:.85;border-radius:42% 58% 63% 37% / 41% 44% 56% 59%;animation:tb-morph 16s ease-in-out infinite alternate,tb-drift 22s ease-in-out infinite alternate}
+.tb .grain .m1{left:-8%;top:-18%;width:50%;background:#ffb48c}
+.tb .grain .m2{right:-10%;top:-14%;width:54%;background:#5546f5;animation-duration:19s,26s;animation-delay:-6s,-4s}
+.tb .grain .m3{left:30%;bottom:-34%;width:50%;background:#6ec6ff;opacity:.8;animation-duration:14s,20s;animation-delay:-3s,-9s}
+@keyframes tb-morph{0%{border-radius:42% 58% 63% 37% / 41% 44% 56% 59%}50%{border-radius:63% 37% 38% 62% / 56% 61% 39% 44%}100%{border-radius:38% 62% 47% 53% / 62% 38% 62% 38%}}
+@keyframes tb-drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(14%,10%) scale(1.15)}100%{transform:translate(-8%,16%) scale(.92)}}
+.tb .grain::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.1 -0.62'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");background-size:160px 160px;opacity:.18;mix-blend-mode:overlay}
+.tb .card{background:var(--b-card);color:var(--b-card-fg);border-radius:10px;box-shadow:0 14px 26px rgba(29,27,74,.22),inset 0 3px 0 rgba(255,255,255,.9),inset 0 -5px 0 rgba(29,27,74,.18)}
+.tb .row{display:grid;grid-template-columns:22.6% minmax(0,1fr) 16.3%;gap:12px}
+.tb .row + .row{margin-top:12px}
+.tb .row.top{grid-template-columns:minmax(0,1fr) 24%}
+.tb .row.body{grid-template-columns:minmax(0,1fr) 24%}
+.tb .pair{display:flex;gap:6px;min-width:0}
+.tb .pair .qs{flex:0 0 min(190px,20vw);transition:flex-basis .25s ease,opacity .2s ease}
+.tb .pair .q{flex:1;min-width:0;display:flex;flex-direction:column}
+.tb .qs h6{display:flex;justify-content:space-between;align-items:center;gap:6px;white-space:nowrap;letter-spacing:.04em}
+.tb .fold,.tb .unfold{font:700 14px/1 "Outfit",sans-serif;color:#f5f4ff;background:rgba(255,255,255,.14);border:1.5px solid rgba(201,196,255,.9);border-radius:6px;width:22px;height:22px;display:grid;place-items:center;cursor:pointer;padding:0}
+.tb .fold:hover,.tb .unfold:hover{background:rgba(255,255,255,.28)}
+.tb .unfold{display:none;flex:none;width:24px;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(255,255,255,.24),rgba(255,255,255,.06));backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%)}
+.tb .pair.folded .qs{display:none}
+.tb .pair.folded .unfold{display:grid}
+.tb .logo{background:var(--b-body0);color:#fff;font:700 20px/1.1 "Outfit",sans-serif;display:flex;align-items:center;padding:14px;border-radius:10px;box-shadow:0 14px 26px rgba(29,27,74,.22),inset 0 3px 0 rgba(255,255,255,.25),inset 0 -5px 0 rgba(0,0,0,.35)}
+.tb .steps{background:var(--b-lilac0);color:var(--b-body0);border-radius:10px;list-style:none;margin:0;padding:8px 14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:center;box-shadow:0 14px 26px rgba(29,27,74,.22),inset 0 3px 0 rgba(255,255,255,.5),inset 0 -5px 0 rgba(0,0,0,.25)}
+.tb .steps li{display:flex;gap:9px;align-items:center;font:600 12.5px/1.2 "Outfit",sans-serif;min-width:0}
+.tb .steps small{display:block;font:700 10px "Quicksand",sans-serif;color:#4b4392}
+.tb .steps i{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:700 12px "Outfit",sans-serif;font-style:normal;box-shadow:0 0 0 3px var(--b-body0),inset 0 2px 0 rgba(255,255,255,.5),inset 0 -2px 0 rgba(0,0,0,.15)}
+.tb .steps .done i{background:var(--b-mint0);color:var(--b-body0)} .tb .steps .skip i{background:var(--b-lilac0);color:var(--b-body0)} .tb .steps .cur i{background:var(--b-coral);color:var(--b-body0)} .tb .steps .next i{background:#fff}
+.tb .nav{display:grid;grid-template-columns:1fr 1fr;gap:3px;align-content:center}
+.tb .nav span{padding:5px 10px;border-radius:7px;background:#f4f3ff;color:var(--b-body0);font:600 11px "Outfit",sans-serif;box-shadow:inset 0 2px 0 rgba(255,255,255,.5),inset 0 -2px 0 rgba(0,0,0,.14)}
+.tb .nav .on{background:var(--b-coral);color:var(--b-body0)}
+.tb .left{display:flex;flex-direction:column;gap:6px}
+.tb .glass.qs{padding:14px}
+.tb .glass.qs h6{color:#eceeff}
+.tb .qs h6,.tb .plan h6{margin:0 0 6px;font:700 10px "Quicksand",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#4b4392}
+.tb .qs ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.tb .qs li{display:flex;gap:9px;align-items:center;padding:6px 0;font-size:11.5px;color:#f5f4ff}
+.tb .qs li i{flex:none;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font:700 10px "Outfit",sans-serif;font-style:normal;box-shadow:0 0 0 2px var(--b-body0)}
+.tb .qs li.ok i{background:var(--b-mint0);color:var(--b-body0)}
+.tb .qs li.on{font-weight:700} .tb .qs li.on i{background:var(--b-coral);color:var(--b-body0)}
+.tb .back{padding:14px;font:600 14px "Outfit",sans-serif;color:var(--b-peri0)}
+.tb .glass{position:relative;isolation:isolate;overflow:hidden;border-radius:12px;padding:14px 17px 16px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.07) 55%,rgba(255,255,255,.12));border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(22px) saturate(175%) brightness(1.05);-webkit-backdrop-filter:blur(22px) saturate(175%) brightness(1.05);color:#eceeff;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 1px 0 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(255,255,255,.12),0 22px 44px -16px rgba(22,12,110,.55)}
+/* frosted glass: fine frost grain */
+.tb .glass::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 -.45'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");background-size:140px 140px;opacity:.9;mix-blend-mode:soft-light}
+.tb .glass::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:linear-gradient(118deg,rgba(255,255,255,.32) 0,rgba(255,255,255,.08) 22%,rgba(255,255,255,0) 40%)}
+.tb .glass h6{margin:0 0 8px;font:700 10px "Quicksand",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#eceeff}
+.tb .glass h5{margin:0 0 4px;font:700 18px/1.25 "Outfit",sans-serif;color:#f4f3ff}
+.tb .glass > p{margin:0 0 10px;font-size:11.5px;color:#fff}
+.tb .opts{list-style:none;margin:0;padding:0;display:grid;gap:6px;justify-items:start}
+.tb .opts li{display:flex;gap:10px;align-items:center;padding:8px 12px;font-size:12px;border-radius:12px}
+.tb .opts i{flex:none;width:13px;height:13px;border-radius:50%;background:#f5f4ff;box-shadow:0 0 0 2.5px var(--b-lilac0)}
+.tb .opts li.sel{background:#fff;color:var(--b-body0);font-weight:800;box-shadow:inset 2px 2px 4px rgba(255,255,255,.43);margin-left:-5px;padding-left:17px;padding-right:24px}
+.tb .opts li.sel i{background:var(--b-coral);box-shadow:inset 2px 2px 4px rgba(255,255,255,.43)}
+.tb .plan{padding:14px;font-size:11.5px}
+.tb .plan dl{margin:0;display:grid;gap:3px}
+.tb .plan dt{margin-top:8px;font:700 10px "Outfit",sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.tb .plan dd{margin:0;display:flex;flex-wrap:wrap;gap:2px 6px}
+.tb .plan .bl{color:var(--b-blue0)} .tb .plan .or{color:#7a52e0}
+.tb .plan .sl{display:block} .tb .plan .sl b{font:700 26px/1 "Outfit",sans-serif;color:var(--b-peri0);margin-right:6px} .tb .plan .sl small{display:block;font-size:10.5px;color:#4b4392;margin-top:3px}
+.tb .foot{margin-top:auto;padding-top:14px;display:flex;justify-content:flex-end}
+.tb .next-step{display:inline-flex;gap:8px;align-items:center;padding:9px 16px;border-radius:999px;font:700 13px "Outfit",sans-serif;color:var(--b-body0);background:var(--b-coral);box-shadow:0 0 0 3px var(--b-body0),0 10px 22px rgba(42,31,168,.35),inset 0 2px 0 rgba(255,255,255,.55),inset 0 -3px 0 rgba(0,0,0,.12)}
+.tb .glass.q{min-height:280px}
+/* playful display type for titles */
+.tb .glass h5{font:700 17px/1.25 "Unbounded",sans-serif;letter-spacing:-.01em}
+.tb .steps li > span,.tb .next-step,.tb .nav span{font-family:"Unbounded",sans-serif;font-weight:500;letter-spacing:-.01em}
+.tb .steps li > span{font-size:11.5px}
+.tb .nav span{font-size:10px}
+.tb .glass h6,.tb .qs h6,.tb .plan h6,.tb .plan dt{font-family:"Unbounded",sans-serif;font-weight:500;letter-spacing:.04em}
+.tb .plan .sl b{font-family:"Unbounded",sans-serif}
+.tb .glass.qs h6{font-size:8.5px;letter-spacing:.02em}
+/* Morph light: vibrant orbs on white, dark violet text on milky glass */
+.mode-light .tb{background:#fff}
+.mode-light .tb .grain{background:#fff}
+.mode-light .tb .grain::after{opacity:.35;mix-blend-mode:multiply;filter:invert(1)}
+.mode-light .tb .grain i{opacity:.8;filter:blur(42px)}
+.mode-light .tb .glass{color:#22186e;background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(255,255,255,.42) 55%,rgba(255,255,255,.55));border-color:rgba(255,255,255,.95);box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(42,31,168,.08),0 20px 40px -18px rgba(42,31,168,.35)}
+.mode-light .tb .glass::after{background:linear-gradient(118deg,rgba(255,255,255,.5) 0,rgba(255,255,255,0) 35%)}
+.mode-light .tb .glass h6,.mode-light .tb .glass.qs h6{color:#4b4392}
+.mode-light .tb .glass h5{color:#22186e}
+.mode-light .tb .glass > p{color:#3b3480}
+.mode-light .tb .qs li{color:#22186e}
+.mode-light .tb .opts li{color:#22186e}
+.mode-light .tb .opts i{background:#fff;box-shadow:0 0 0 2.5px #9d92ff}
+.mode-light .tb .opts li.sel{background:#fff;box-shadow:0 0 0 2px var(--b-body0),0 6px 14px -6px rgba(42,31,168,.4)}
+.mode-light .tb .opts li.sel i{background:var(--b-coral);box-shadow:none}
+.mode-light .tb .fold,.mode-light .tb .unfold{color:var(--b-body0);background:rgba(255,255,255,.7);border-color:#c9c4ff}
+/* Morph dark: a night version of the same scene */
+.mode-dark .tb{background:#0b0826}
+.mode-dark .tb .grain{background:#0b0826}
+.mode-dark .tb .grain::after{opacity:.1}
+.mode-dark .tb .grain i{opacity:.55;filter:blur(46px)}
+.mode-dark .tb .grain .m1{opacity:.22} .mode-dark .tb .grain .m2{opacity:.7} .mode-dark .tb .grain .m3{opacity:.45}
+.mode-dark .tb .steps{background:#1b1650;color:#eceeff;box-shadow:0 14px 26px rgba(0,0,0,.4),inset 0 2px 0 rgba(255,255,255,.14),inset 0 -5px 0 rgba(0,0,0,.35)}
+.mode-dark .tb .steps small{color:#b9b3ff}
+.mode-dark .tb .steps i{box-shadow:0 0 0 3px #0b0826,inset 0 2px 0 rgba(255,255,255,.5),inset 0 -2px 0 rgba(0,0,0,.15)}
+.mode-dark .tb .steps .skip i{background:#3b357f;color:#eceeff} .mode-dark .tb .steps .next i{background:#2a2470;color:#eceeff}
+.mode-dark .tb .nav span{background:#1b1650;color:#eceeff;box-shadow:inset 0 2px 0 rgba(255,255,255,.12),inset 0 -2px 0 rgba(0,0,0,.3)}
+.mode-dark .tb .nav .on{background:var(--b-coral);color:#1b1650}
+.mode-dark .tb .card{background:#17133f;color:#eceeff;box-shadow:0 14px 26px rgba(0,0,0,.4),inset 0 2px 0 rgba(255,255,255,.14),inset 0 -5px 0 rgba(0,0,0,.35)}
+.mode-dark .tb .plan h6,.mode-dark .tb .plan .sl small{color:#b9b3ff}
+.mode-dark .tb .plan .bl{color:#a99bff} .mode-dark .tb .plan .or{color:#d5a8ff} .mode-dark .tb .plan .sl b{color:#c9c4ff}
+/* smoked glass: smooth dark tint and a clean top edge; the frost grain is kept very faint so it doesn't speckle on dark */
+.mode-dark .tb .glass{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(23,19,63,.42) 40%,rgba(23,19,63,.55));border-color:rgba(255,255,255,.18);backdrop-filter:blur(30px) saturate(140%);-webkit-backdrop-filter:blur(30px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 0 0 1px rgba(255,255,255,.04),0 22px 44px -16px rgba(0,0,0,.7)}
+.mode-dark .tb .glass::before{opacity:.12}
+.mode-dark .tb .glass::after{background:linear-gradient(118deg,rgba(255,255,255,.14) 0,rgba(255,255,255,0) 35%)}
+.mode-dark .tb .opts i{background:#2a2470;box-shadow:0 0 0 2.5px #8f86ff}
+.mode-dark .tb .opts li.sel i{background:var(--b-coral)}
+.mode-dark .tb .next-step{box-shadow:0 0 0 3px #0b0826,0 10px 26px rgba(255,122,138,.35),inset 0 2px 0 rgba(255,255,255,.55),inset 0 -3px 0 rgba(0,0,0,.12)}
+@media (max-width:760px){ .tb .row{grid-template-columns:minmax(0,1fr)} .tb .steps{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+/* ---------- Theme C: Message Grid (plum, lilac + periwinkle, MP237) ---------- */
+.tc{background:var(--c-bg);color:var(--c-fg);font-family:"Archivo",sans-serif}
+.tc .s-body{padding:0;gap:0}
+.tc .s-body > *{padding:0 14px 16px}
+/* column headers sit flush under the stepper as one band */
+.tc .s-body > * > h6:first-child{display:flex;justify-content:space-between;gap:8px;margin:0 -14px 14px;padding:10px 14px;background:var(--c-tint);border-bottom:1.5px solid var(--c-line)}
+.tc .s-qs{background:var(--c-bg)}
+.tc .s-q,.tc .s-plan{background:linear-gradient(var(--c-mesh) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,var(--c-mesh) 1px,transparent 1px) 0 0/28px 28px,var(--c-bg);background-position:-1px -1px}
+/* message bubbles with a small tail */
+.tc .msg{margin:4px 0 22px;max-width:520px}
+.tc .bubble{position:relative;background:var(--c-bub);color:var(--c-bub-fg);border-radius:12px;padding:14px 16px 14px}
+.tc .bubble::after{content:"";position:absolute;left:22px;bottom:-15px;width:18px;height:16px;background:inherit;clip-path:polygon(0 0,100% 0,0 100%)}
+.tc .bubble h5{margin:0 0 6px;font:700 17px/1.15 "Archivo",sans-serif;text-transform:uppercase;letter-spacing:-.005em;color:inherit}
+.tc .bubble h5::before{content:"↪ ";font-weight:400}
+.tc .bubble p{margin:0;font-size:11.5px;opacity:.85}
+.tc .s-opts li{background:var(--c-bg)}
+.tc .s-plan dd.q{display:block;margin:4px 0 14px}
+.tc .s-plan .reply{position:relative;display:block;background:var(--c-pop);color:var(--c-pop-fg);border-radius:10px;padding:8px 10px;font-weight:600;font-size:11.5px}
+.tc .s-plan .reply::after{content:"";position:absolute;right:16px;bottom:-9px;width:12px;height:10px;background:inherit;clip-path:polygon(0 0,100% 0,100% 100%)}
+.tc h6,.tc .s-plan dt,.tc .s-steps small,.tc .s-nav{font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--c-muted)}
+.tc h6{font-size:10px;color:var(--c-fg)}
+.tc .s-head{border-bottom:1.5px solid var(--c-line)}
+.tc .s-logo{font:800 14px "Archivo",sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.tc .s-nav span{box-shadow:inset 0 0 0 2px var(--c-line);color:var(--c-fg);font-size:10px;text-transform:uppercase}
+.tc .s-nav .s-try{box-shadow:inset 0 0 0 2px var(--c-pop)}
+.tc .s-steps{border-bottom:1.5px solid var(--c-line);margin-bottom:0;position:relative}
+.tc .s-steps li > i{background:var(--c-tint);box-shadow:inset 0 0 0 2px var(--c-mid);font:800 11px "Archivo",sans-serif;border-radius:50%}
+.tc .s-steps li.done > i{background:var(--c-strong);color:var(--c-bg);box-shadow:none}
+.tc .s-steps li.skip{color:var(--c-muted)}
+.tc .s-steps li.cur > i{background:var(--c-pop);color:var(--c-pop-fg);box-shadow:none}
+.tc .s-steps li.next{color:var(--c-muted)}
+.tc .s-qs li{box-shadow:inset 0 0 0 2px var(--c-line)}
+.tc .s-qs li.on{box-shadow:inset 0 0 0 2px var(--c-strong);font-weight:600}
+.tc .s-qs li.ok::before{content:"✓ ";color:var(--c-strong);font-weight:800}
+.tc .s-link{color:var(--c-strong);font-weight:600}
+.tc .s-q{border-left:1.5px solid var(--c-line);border-right:1.5px solid var(--c-line)}
+.tc .s-q h5{font-weight:700;font-size:17px}
+.tc .s-q > p{color:var(--c-muted)}
+.tc .s-opts li{box-shadow:inset 0 0 0 2px var(--c-line)}
+.tc .s-opts li > i{box-shadow:inset 0 0 0 2px var(--c-mid)}
+.tc .s-opts li.sel{box-shadow:inset 0 0 0 2px var(--c-strong);background:var(--c-tint);font-weight:600}
+.tc .s-opts li.sel > i{background:var(--c-pop);box-shadow:none}
+.tc .s-cta{background:var(--c-pop);color:var(--c-pop-fg);font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:11px}
+.tc .s-plan .tag{background:var(--c-tint);box-shadow:inset 0 0 0 1px var(--c-mid)}
+.tc .s-plan dd.sl b{font:800 30px/1 "Archivo",sans-serif;color:var(--c-strong);display:block}
+.tc .s-plan dd.sl small{color:var(--c-muted)}
+.tc .s-dl{box-shadow:inset 0 0 0 2px var(--c-fg)}
+
+@media (max-width:860px){ .theme,.compare{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:540px){
+  .tb .panes,.tc .body{grid-template-columns:minmax(0,1fr)}
+  .tb .pane.back{transform:none}
+  .spec dl{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+
+.cmp h3,.spec h2{font-family:var(--display);font-stretch:75%;font-weight:600;letter-spacing:-.01em}
+.spec h2{font-size:1.5rem}
+.compare{gap:24px}
+@media (min-width:621px){.ta .s-q{border-right:0}.ta .s-plan{border-left:1px solid var(--a-rule)}}
+</style>
+<div class="wrap">
+<section class="compare" aria-label="Quick compare">
+    <a class="cmp" href="#theme-a">
+      <span class="eyebrow">Drafting your plan on paper</span>
+      <h3>A · Paper Plan</h3>
+    </a>
+    <a class="cmp" href="#theme-b">
+      <span class="eyebrow">Early VR, vibrant and playful</span>
+      <h3>B · Morph</h3>
+    </a>
+    <a class="cmp" href="#theme-c">
+      <span class="eyebrow">A design canvas with a chat assistant</span>
+      <h3>C · Canvas Chat</h3>
+    </a>
+  </section>
+
+  <!-- ===== A ===== -->
+  <section class="theme" id="theme-a">
+    <div class="spec">
+      <div><span class="label">Theme A</span><h2>Paper Plan</h2><p>Inspired by a planning notebook: you draft your plan on paper. A clean ruled page, with hand-drawn rings, ticks and underlines only where you are or what you chose, and a sticker for the next step.</p></div>
+      <div><span class="label">Why it fits</span><p>Artists plan in sketchbooks, so drafting a distribution plan should feel the same: personal, a little loose, and easy to change. The ruled grid keeps it easy to scan.</p></div>
+      <div><span class="label">Main elements</span><ul class="els"><li>Ruled grid</li><li>Hand-drawn marks</li><li>Highlighter</li></ul></div>
+      <div><span class="label">Colour palette</span>
+      <div class="sw">
+        <div><i style="background:var(--a-cta)"></i><b>Coral, action only</b>#FF4F3F / #FF5A4A</div>
+        <div><i style="background:var(--a-sun)"></i><b>Sun</b>#FFC23A / #FFCC4D</div>
+        <div><i style="background:var(--a-violet)"></i><b>Violet</b>#6A4CFF / #9A85FF</div>
+        <div><i style="background:var(--a-sky)"></i><b>Sky</b>#3AA8F5 / #55B8FF</div>
+        <div><i style="background:var(--a-mint)"></i><b>Mint</b>#2FC48F / #4FE3B0</div>
+        <div><i style="background:var(--a-pink)"></i><b>Pink</b>#FF6FCF / #FF86D8</div>
+        <div><i style="background:var(--a-bg)"></i><b>Page</b>#FFFFFF / #161618</div>
+        <div><i style="background:var(--a-fg)"></i><b>Ink</b>#141416 / #EFEFF1</div>
+      </div>
+      </div>
+    </div>
+    <div class="modes">
+      <div class="screen mode-light">
+        <div class="scr ta">
+          <header class="s-head"><span class="s-logo">XR Distribution Toolkit</span>
+            <nav class="s-nav"><span class="s-try lab">Project guide<svg class="hd" viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M1 3 C25 1 60 5 99 2"/></svg></span><span class="lab">Venue data</span><span class="lab">Case studies</span></nav></header>
+          <ol class="s-steps">
+            <li class="done"><i><svg class="hd" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2.5 C21 2 26 7 25.5 14 C25 21 20 26 13.5 25.5 C6.5 25 2.5 20 2.6 13.5 C2.8 7 7.5 3 15.5 3.4"/><path class="ck" d="M8.5 14.5 L12.5 18.5 L20 9"/></svg><b></b></i><span>Develop<small>Done</small></span></li>
+            <li class="skip"><i><svg class="hd" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2.5 C21 2 26 7 25.5 14 C25 21 20 26 13.5 25.5 C6.5 25 2.5 20 2.6 13.5 C2.8 7 7.5 3 15.5 3.4"/></svg><b>02</b></i><span>Premiere<small>Skipped</small></span></li>
+            <li class="cur"><i><svg class="hd" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2.5 C21 2 26 7 25.5 14 C25 21 20 26 13.5 25.5 C6.5 25 2.5 20 2.6 13.5 C2.8 7 7.5 3 15.5 3.4"/></svg><b>03</b></i><span>Circulate<small>Current</small></span></li>
+            <li class="next"><i><b>04</b></i><span>Your plan<small>Any time</small></span></li>
+          </ol>
+          <div class="s-body">
+            <aside class="s-qs"><div class="top"><h6>+ Circulate</h6>
+              <ul><li class="ok">1 Direct or with support</li><li class="ok">2 Region</li><li class="ok">3 Venues we suggest</li><li class="on">4 What to check<svg class="hd ring" viewBox="0 0 160 34" preserveAspectRatio="none" aria-hidden="true"><path d="M14 27 C4 18 18 5 70 3 C126 1 158 8 155 18 C152 29 112 33 70 32 C32 31 6 26 9 15 C11 9 24 6 38 5"/></svg></li></ul></div>
+              <div class="bot"><div class="key"><span><i style="--k:var(--a-sky)"></i>Filters / Requirements</span><span><i style="--k:var(--a-sun)"></i>Prompt to think with</span><span><i style="--k:var(--a-pink)"></i>Venue / Platform</span></div>
+              <span class="s-link">← Back to Develop</span></div></aside>
+            <section class="s-q"><h6>Question 4 of 4 <span class="qtype" style="--qt:var(--a-sun)">Prompt to think with</span></h6>
+              <h5><span class="plus">+</span> What else should you check before showing at a venue?</h5>
+              <p>Tick what you still need to find out; it goes into your plan as questions to ask.</p>
+              <ul class="s-opts" style="--tick:var(--a-sun)"><li><i></i><span>Space: floor area, ceiling height, blackout</span></li><li><i></i><span>Who installs, runs and maintains it</span></li><li class="sel"><i><svg class="hd" viewBox="0 0 20 18" aria-hidden="true"><path d="M2 9.5 C4 11 6 13.5 7.5 16 C10 10 13.5 5 19 1"/></svg></i><span>Visitors per hour and session length</span></li><li class="sel"><i><svg class="hd" viewBox="0 0 20 18" aria-hidden="true"><path d="M2 9.5 C4 11 6 13.5 7.5 16 C10 10 13.5 5 19 1"/></svg></i><span>Fees, and who pays shipping and insurance</span></li><li><i></i><span>Power, internet and whether headsets are supplied</span></li></ul>
+              <div class="s-foot"><span class="s-cta">See my plan →</span></div></section>
+            <aside class="s-plan"><h6>+ Your plan</h6>
+              <div class="list"><dl><dt style="--qt:var(--a-sky)">Required</dt><dd><span class="tag">Visual art</span></dd>
+              <dt style="--qt:var(--a-sky)">Flexible</dt><dd><span class="tag">Non-headset</span><span class="tag">The general public</span><span class="tag">Europe</span></dd>
+              <dt style="--qt:var(--a-sun)">To find out</dt><dd class="q">“A room of about 5 × 4 m and strong internet”</dd><dd class="q">Visitors per hour; fees and shipping</dd></dl></div>
+              <div class="short"><span class="qtype" style="--qt:var(--a-pink)">Shortlist</span>
+                <div class="sl"><span class="count">5<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M91.0,50.0 L92.0,51.1 L92.6,52.2 L92.5,53.3 L91.8,54.4 L90.6,55.4 L89.5,56.3 L88.7,57.2 L88.5,58.2 L88.9,59.3 L89.6,60.6 L90.3,61.9 L90.5,63.2 L90.2,64.2 L89.2,65.1 L87.9,65.7 L86.5,66.3 L85.5,67.0 L85.1,67.9 L85.2,69.1 L85.5,70.5 L85.8,71.9 L85.7,73.2 L85.1,74.1 L84.0,74.7 L82.5,75.0 L81.1,75.2 L79.9,75.6 L79.3,76.4 L79.0,77.5 L79.0,79.0 L78.9,80.5 L78.5,81.7 L77.7,82.4 L76.4,82.6 L75.0,82.5 L73.5,82.4 L72.3,82.5 L71.4,83.0 L70.9,84.1 L70.5,85.5 L70.0,86.9 L69.3,88.0 L68.3,88.5 L67.1,88.4 L65.7,87.9 L64.3,87.3 L63.1,87.1 L62.2,87.5 L61.4,88.4 L60.6,89.6 L59.8,90.8 L58.9,91.7 L57.8,91.9 L56.6,91.5 L55.4,90.6 L54.2,89.8 L53.1,89.3 L52.1,89.3 L51.0,90.0 L50.0,91.0 L48.9,92.0 L47.8,92.6 L46.7,92.5 L45.6,91.8 L44.6,90.6 L43.7,89.5 L42.8,88.7 L41.8,88.5 L40.7,88.9 L39.4,89.6 L38.1,90.3 L36.8,90.5 L35.8,90.2 L34.9,89.2 L34.3,87.9 L33.7,86.5 L33.0,85.5 L32.1,85.1 L30.9,85.2 L29.5,85.5 L28.1,85.8 L26.8,85.7 L25.9,85.1 L25.3,84.0 L25.0,82.5 L24.8,81.1 L24.4,79.9 L23.6,79.3 L22.5,79.0 L21.0,79.0 L19.5,78.9 L18.3,78.5 L17.6,77.7 L17.4,76.4 L17.5,75.0 L17.6,73.5 L17.5,72.3 L17.0,71.4 L15.9,70.9 L14.5,70.5 L13.1,70.0 L12.0,69.3 L11.5,68.3 L11.6,67.1 L12.1,65.7 L12.7,64.3 L12.9,63.1 L12.5,62.2 L11.6,61.4 L10.4,60.6 L9.2,59.8 L8.3,58.9 L8.1,57.8 L8.5,56.6 L9.4,55.4 L10.2,54.2 L10.7,53.1 L10.7,52.1 L10.0,51.0 L9.0,50.0 L8.0,48.9 L7.4,47.8 L7.5,46.7 L8.2,45.6 L9.4,44.6 L10.5,43.7 L11.3,42.8 L11.5,41.8 L11.1,40.7 L10.4,39.4 L9.7,38.1 L9.5,36.8 L9.8,35.8 L10.8,34.9 L12.1,34.3 L13.5,33.7 L14.5,33.0 L14.9,32.1 L14.8,30.9 L14.5,29.5 L14.2,28.1 L14.3,26.8 L14.9,25.9 L16.0,25.3 L17.5,25.0 L18.9,24.8 L20.1,24.4 L20.7,23.6 L21.0,22.5 L21.0,21.0 L21.1,19.5 L21.5,18.3 L22.3,17.6 L23.6,17.4 L25.0,17.5 L26.5,17.6 L27.7,17.5 L28.6,17.0 L29.1,15.9 L29.5,14.5 L30.0,13.1 L30.7,12.0 L31.7,11.5 L32.9,11.6 L34.3,12.1 L35.7,12.7 L36.9,12.9 L37.8,12.5 L38.6,11.6 L39.4,10.4 L40.2,9.2 L41.1,8.3 L42.2,8.1 L43.4,8.5 L44.6,9.4 L45.8,10.2 L46.9,10.7 L47.9,10.7 L49.0,10.0 L50.0,9.0 L51.1,8.0 L52.2,7.4 L53.3,7.5 L54.4,8.2 L55.4,9.4 L56.3,10.5 L57.2,11.3 L58.2,11.5 L59.3,11.1 L60.6,10.4 L61.9,9.7 L63.2,9.5 L64.2,9.8 L65.1,10.8 L65.7,12.1 L66.3,13.5 L67.0,14.5 L67.9,14.9 L69.1,14.8 L70.5,14.5 L71.9,14.2 L73.2,14.3 L74.1,14.9 L74.7,16.0 L75.0,17.5 L75.2,18.9 L75.6,20.1 L76.4,20.7 L77.5,21.0 L79.0,21.0 L80.5,21.1 L81.7,21.5 L82.4,22.3 L82.6,23.6 L82.5,25.0 L82.4,26.5 L82.5,27.7 L83.0,28.6 L84.1,29.1 L85.5,29.5 L86.9,30.0 L88.0,30.7 L88.5,31.7 L88.4,32.9 L87.9,34.3 L87.3,35.7 L87.1,36.9 L87.5,37.8 L88.4,38.6 L89.6,39.4 L90.8,40.2 L91.7,41.1 L91.9,42.2 L91.5,43.4 L90.6,44.6 L89.8,45.8 L89.3,46.9 L89.3,47.9 L90.0,49.0 L91.0,50.0Z"/></svg></span><span>suggested venues kept<small>44 venues fit your required answers</small></span></div></div></aside>
+          </div>
+        </div>
+        <div class="cap">Light mode</div>
+      </div>
+      <div class="screen mode-dark">
+        <div class="scr ta">
+          <header class="s-head"><span class="s-logo">XR Distribution Toolkit</span>
+            <nav class="s-nav"><span class="s-try lab">Project guide<svg class="hd" viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M1 3 C25 1 60 5 99 2"/></svg></span><span class="lab">Venue data</span><span class="lab">Case studies</span></nav></header>
+          <ol class="s-steps">
+            <li class="done"><i><svg class="hd" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2.5 C21 2 26 7 25.5 14 C25 21 20 26 13.5 25.5 C6.5 25 2.5 20 2.6 13.5 C2.8 7 7.5 3 15.5 3.4"/><path class="ck" d="M8.5 14.5 L12.5 18.5 L20 9"/></svg><b></b></i><span>Develop<small>Done</small></span></li>
+            <li class="skip"><i><svg class="hd" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2.5 C21 2 26 7 25.5 14 C25 21 20 26 13.5 25.5 C6.5 25 2.5 20 2.6 13.5 C2.8 7 7.5 3 15.5 3.4"/></svg><b>02</b></i><span>Premiere<small>Skipped</small></span></li>
+            <li class="cur"><i><svg class="hd" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2.5 C21 2 26 7 25.5 14 C25 21 20 26 13.5 25.5 C6.5 25 2.5 20 2.6 13.5 C2.8 7 7.5 3 15.5 3.4"/></svg><b>03</b></i><span>Circulate<small>Current</small></span></li>
+            <li class="next"><i><b>04</b></i><span>Your plan<small>Any time</small></span></li>
+          </ol>
+          <div class="s-body">
+            <aside class="s-qs"><div class="top"><h6>+ Circulate</h6>
+              <ul><li class="ok">1 Direct or with support</li><li class="ok">2 Region</li><li class="ok">3 Venues we suggest</li><li class="on">4 What to check<svg class="hd ring" viewBox="0 0 160 34" preserveAspectRatio="none" aria-hidden="true"><path d="M14 27 C4 18 18 5 70 3 C126 1 158 8 155 18 C152 29 112 33 70 32 C32 31 6 26 9 15 C11 9 24 6 38 5"/></svg></li></ul></div>
+              <div class="bot"><div class="key"><span><i style="--k:var(--a-sky)"></i>Filters / Requirements</span><span><i style="--k:var(--a-sun)"></i>Prompt to think with</span><span><i style="--k:var(--a-pink)"></i>Venue / Platform</span></div>
+              <span class="s-link">← Back to Develop</span></div></aside>
+            <section class="s-q"><h6>Question 4 of 4 <span class="qtype" style="--qt:var(--a-sun)">Prompt to think with</span></h6>
+              <h5><span class="plus">+</span> What else should you check before showing at a venue?</h5>
+              <p>Tick what you still need to find out; it goes into your plan as questions to ask.</p>
+              <ul class="s-opts" style="--tick:var(--a-sun)"><li><i></i><span>Space: floor area, ceiling height, blackout</span></li><li><i></i><span>Who installs, runs and maintains it</span></li><li class="sel"><i><svg class="hd" viewBox="0 0 20 18" aria-hidden="true"><path d="M2 9.5 C4 11 6 13.5 7.5 16 C10 10 13.5 5 19 1"/></svg></i><span>Visitors per hour and session length</span></li><li class="sel"><i><svg class="hd" viewBox="0 0 20 18" aria-hidden="true"><path d="M2 9.5 C4 11 6 13.5 7.5 16 C10 10 13.5 5 19 1"/></svg></i><span>Fees, and who pays shipping and insurance</span></li><li><i></i><span>Power, internet and whether headsets are supplied</span></li></ul>
+              <div class="s-foot"><span class="s-cta">See my plan →</span></div></section>
+            <aside class="s-plan"><h6>+ Your plan</h6>
+              <div class="list"><dl><dt style="--qt:var(--a-sky)">Required</dt><dd><span class="tag">Visual art</span></dd>
+              <dt style="--qt:var(--a-sky)">Flexible</dt><dd><span class="tag">Non-headset</span><span class="tag">The general public</span><span class="tag">Europe</span></dd>
+              <dt style="--qt:var(--a-sun)">To find out</dt><dd class="q">“A room of about 5 × 4 m and strong internet”</dd><dd class="q">Visitors per hour; fees and shipping</dd></dl></div>
+              <div class="short"><span class="qtype" style="--qt:var(--a-pink)">Shortlist</span>
+                <div class="sl"><span class="count">5<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M91.0,50.0 L92.0,51.1 L92.6,52.2 L92.5,53.3 L91.8,54.4 L90.6,55.4 L89.5,56.3 L88.7,57.2 L88.5,58.2 L88.9,59.3 L89.6,60.6 L90.3,61.9 L90.5,63.2 L90.2,64.2 L89.2,65.1 L87.9,65.7 L86.5,66.3 L85.5,67.0 L85.1,67.9 L85.2,69.1 L85.5,70.5 L85.8,71.9 L85.7,73.2 L85.1,74.1 L84.0,74.7 L82.5,75.0 L81.1,75.2 L79.9,75.6 L79.3,76.4 L79.0,77.5 L79.0,79.0 L78.9,80.5 L78.5,81.7 L77.7,82.4 L76.4,82.6 L75.0,82.5 L73.5,82.4 L72.3,82.5 L71.4,83.0 L70.9,84.1 L70.5,85.5 L70.0,86.9 L69.3,88.0 L68.3,88.5 L67.1,88.4 L65.7,87.9 L64.3,87.3 L63.1,87.1 L62.2,87.5 L61.4,88.4 L60.6,89.6 L59.8,90.8 L58.9,91.7 L57.8,91.9 L56.6,91.5 L55.4,90.6 L54.2,89.8 L53.1,89.3 L52.1,89.3 L51.0,90.0 L50.0,91.0 L48.9,92.0 L47.8,92.6 L46.7,92.5 L45.6,91.8 L44.6,90.6 L43.7,89.5 L42.8,88.7 L41.8,88.5 L40.7,88.9 L39.4,89.6 L38.1,90.3 L36.8,90.5 L35.8,90.2 L34.9,89.2 L34.3,87.9 L33.7,86.5 L33.0,85.5 L32.1,85.1 L30.9,85.2 L29.5,85.5 L28.1,85.8 L26.8,85.7 L25.9,85.1 L25.3,84.0 L25.0,82.5 L24.8,81.1 L24.4,79.9 L23.6,79.3 L22.5,79.0 L21.0,79.0 L19.5,78.9 L18.3,78.5 L17.6,77.7 L17.4,76.4 L17.5,75.0 L17.6,73.5 L17.5,72.3 L17.0,71.4 L15.9,70.9 L14.5,70.5 L13.1,70.0 L12.0,69.3 L11.5,68.3 L11.6,67.1 L12.1,65.7 L12.7,64.3 L12.9,63.1 L12.5,62.2 L11.6,61.4 L10.4,60.6 L9.2,59.8 L8.3,58.9 L8.1,57.8 L8.5,56.6 L9.4,55.4 L10.2,54.2 L10.7,53.1 L10.7,52.1 L10.0,51.0 L9.0,50.0 L8.0,48.9 L7.4,47.8 L7.5,46.7 L8.2,45.6 L9.4,44.6 L10.5,43.7 L11.3,42.8 L11.5,41.8 L11.1,40.7 L10.4,39.4 L9.7,38.1 L9.5,36.8 L9.8,35.8 L10.8,34.9 L12.1,34.3 L13.5,33.7 L14.5,33.0 L14.9,32.1 L14.8,30.9 L14.5,29.5 L14.2,28.1 L14.3,26.8 L14.9,25.9 L16.0,25.3 L17.5,25.0 L18.9,24.8 L20.1,24.4 L20.7,23.6 L21.0,22.5 L21.0,21.0 L21.1,19.5 L21.5,18.3 L22.3,17.6 L23.6,17.4 L25.0,17.5 L26.5,17.6 L27.7,17.5 L28.6,17.0 L29.1,15.9 L29.5,14.5 L30.0,13.1 L30.7,12.0 L31.7,11.5 L32.9,11.6 L34.3,12.1 L35.7,12.7 L36.9,12.9 L37.8,12.5 L38.6,11.6 L39.4,10.4 L40.2,9.2 L41.1,8.3 L42.2,8.1 L43.4,8.5 L44.6,9.4 L45.8,10.2 L46.9,10.7 L47.9,10.7 L49.0,10.0 L50.0,9.0 L51.1,8.0 L52.2,7.4 L53.3,7.5 L54.4,8.2 L55.4,9.4 L56.3,10.5 L57.2,11.3 L58.2,11.5 L59.3,11.1 L60.6,10.4 L61.9,9.7 L63.2,9.5 L64.2,9.8 L65.1,10.8 L65.7,12.1 L66.3,13.5 L67.0,14.5 L67.9,14.9 L69.1,14.8 L70.5,14.5 L71.9,14.2 L73.2,14.3 L74.1,14.9 L74.7,16.0 L75.0,17.5 L75.2,18.9 L75.6,20.1 L76.4,20.7 L77.5,21.0 L79.0,21.0 L80.5,21.1 L81.7,21.5 L82.4,22.3 L82.6,23.6 L82.5,25.0 L82.4,26.5 L82.5,27.7 L83.0,28.6 L84.1,29.1 L85.5,29.5 L86.9,30.0 L88.0,30.7 L88.5,31.7 L88.4,32.9 L87.9,34.3 L87.3,35.7 L87.1,36.9 L87.5,37.8 L88.4,38.6 L89.6,39.4 L90.8,40.2 L91.7,41.1 L91.9,42.2 L91.5,43.4 L90.6,44.6 L89.8,45.8 L89.3,46.9 L89.3,47.9 L90.0,49.0 L91.0,50.0Z"/></svg></span><span>suggested venues kept<small>44 venues fit your required answers</small></span></div></div></aside>
+          </div>
+        </div>
+        <div class="cap">Dark mode</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== B ===== -->
+  <section class="theme" id="theme-b">
+    <div class="spec">
+      <div><span class="label">Theme B</span><h2>Morph</h2><p>Inspired by the early VR look: cartoonish, vibrant and a little game-like. Three colour orbs (violet, sky, peach) drift, morph and merge under a grain texture, on white in light mode and on deep night in dark mode, behind sticker cards and frosted glass panels.</p></div>
+      <div><span class="label">Why it fits</span><p>It speaks the visual language of XR makers, and its playfulness makes a long planning task feel like exploring rather than filling in a form.</p></div>
+      <div><span class="label">Main elements</span><ul class="els"><li>Colour orbs</li><li>Frosted glass</li><li>3D buttons</li></ul></div>
+      <div><span class="label">Colour palette</span>
+      <div class="sw">
+        <div><i style="background:#ffffff"></i><b>White · light ground</b>#FFFFFF</div>
+        <div><i style="background:#0b0826"></i><b>Night · dark ground</b>#0B0826</div>
+        <div><i style="background:#5546f5"></i><b>Violet · orb</b>#5546F5</div>
+        <div><i style="background:#6ec6ff"></i><b>Sky · orb</b>#6EC6FF</div>
+        <div><i style="background:#ffb48c"></i><b>Peach · orb</b>#FFB48C</div>
+        <div><i style="background:#ff7a8a"></i><b>Coral · action, current</b>#FF7A8A</div>
+        <div><i style="background:#b8f7cf"></i><b>Mint · finished</b>#B8F7CF</div>
+        <div><i style="background:#c9c4ff"></i><b>Lavender · cards, skipped</b>#C9C4FF</div>
+        <div><i style="background:#2a1fa8"></i><b>Ink · text, rims</b>#2A1FA8</div>
+      </div>
+      </div>
+    </div>
+    <div class="modes">
+      <div class="screen mode-light">
+        <div class="scr tb">
+          <div class="grain" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
+          <div class="row top">
+            <ol class="steps">
+              <li class="done"><i>✓</i><span>Develop<small>Done</small></span></li>
+              <li class="skip"><i>–</i><span>Premiere<small>Skipped · reopen</small></span></li>
+              <li class="cur"><i>3</i><span>Circulate<small>Current</small></span></li>
+              <li class="next"><i></i><span>Finalize<small>Pending review</small></span></li>
+            </ol>
+            <nav class="nav"><span class="on">Planning</span><span>Venues data</span><span>Case studies</span><span>About</span></nav>
+          </div>
+          <div class="row body">
+            <div class="pair">
+            <aside class="glass qs" id="tb-qs"><h6>Circulate · questions<button type="button" class="fold" aria-expanded="true" aria-controls="tb-qs" aria-label="Hide question list">‹</button></h6>
+              <ul><li class="ok"><i>✓</i>1 Direct or with support</li><li class="ok"><i>✓</i>2 Region</li><li class="ok"><i>✓</i>3 Venues we suggest</li><li class="on"><i>4</i>What to check</li></ul></aside>
+            <button type="button" class="unfold" aria-label="Show question list">›</button>
+            <section class="glass q"><h6>Question 4 of 4</h6>
+              <h5>What else should you check before showing at a venue?</h5>
+              <p>A prompt to think with, not a filter. Tick what you still need to find out; it goes into your plan as questions to ask.</p>
+              <ul class="opts"><li><i></i>Space: floor area, ceiling height, blackout</li><li><i></i>Who installs, runs and maintains it</li><li class="sel"><i></i>Visitors per hour and session length</li><li><i></i>Fees, and who pays shipping and insurance</li><li><i></i>Power, internet and whether headsets are supplied</li></ul>
+              <div class="foot"><span class="next-step">Next step →</span></div>
+            </section>
+            </div>
+            <aside class="card plan"><h6>Your plan</h6>
+              <dl><dt>Required</dt><dd class="bl">Visual art</dd>
+              <dt>Flexible</dt><dd class="or"><span>Non-headset</span><span>The general public</span><span>Europe</span></dd>
+              <dt>To find out</dt><dd>“A room of about 5 × 4 m and strong internet”</dd><dd>“I’ll approach venues myself”</dd>
+              <dt>Shortlist</dt><dd class="sl"><b>5</b>suggested venues kept<small>44 venues fit your required answers</small></dd></dl></aside>
+          </div>
+        </div>
+        <div class="cap">Light mode</div>
+      </div>
+      <div class="screen mode-dark">
+        <div class="scr tb">
+          <div class="grain" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
+          <div class="row top">
+            <ol class="steps">
+              <li class="done"><i>✓</i><span>Develop<small>Done</small></span></li>
+              <li class="skip"><i>–</i><span>Premiere<small>Skipped · reopen</small></span></li>
+              <li class="cur"><i>3</i><span>Circulate<small>Current</small></span></li>
+              <li class="next"><i></i><span>Finalize<small>Pending review</small></span></li>
+            </ol>
+            <nav class="nav"><span class="on">Planning</span><span>Venues data</span><span>Case studies</span><span>About</span></nav>
+          </div>
+          <div class="row body">
+            <div class="pair">
+            <aside class="glass qs" id="tb-qs-dark"><h6>Circulate · questions<button type="button" class="fold" aria-expanded="true" aria-controls="tb-qs-dark" aria-label="Hide question list">‹</button></h6>
+              <ul><li class="ok"><i>✓</i>1 Direct or with support</li><li class="ok"><i>✓</i>2 Region</li><li class="ok"><i>✓</i>3 Venues we suggest</li><li class="on"><i>4</i>What to check</li></ul></aside>
+            <button type="button" class="unfold" aria-label="Show question list">›</button>
+            <section class="glass q"><h6>Question 4 of 4</h6>
+              <h5>What else should you check before showing at a venue?</h5>
+              <p>A prompt to think with, not a filter. Tick what you still need to find out; it goes into your plan as questions to ask.</p>
+              <ul class="opts"><li><i></i>Space: floor area, ceiling height, blackout</li><li><i></i>Who installs, runs and maintains it</li><li class="sel"><i></i>Visitors per hour and session length</li><li><i></i>Fees, and who pays shipping and insurance</li><li><i></i>Power, internet and whether headsets are supplied</li></ul>
+              <div class="foot"><span class="next-step">Next step →</span></div>
+            </section>
+            </div>
+            <aside class="card plan"><h6>Your plan</h6>
+              <dl><dt>Required</dt><dd class="bl">Visual art</dd>
+              <dt>Flexible</dt><dd class="or"><span>Non-headset</span><span>The general public</span><span>Europe</span></dd>
+              <dt>To find out</dt><dd>“A room of about 5 × 4 m and strong internet”</dd><dd>“I’ll approach venues myself”</dd>
+              <dt>Shortlist</dt><dd class="sl"><b>5</b>suggested venues kept<small>44 venues fit your required answers</small></dd></dl></aside>
+          </div>
+        </div>
+        <div class="cap">Dark mode</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== C ===== -->
+  <section class="theme" id="theme-c">
+    <div class="spec">
+      <div><span class="label">Theme C</span><h2>Canvas Chat</h2><p>Inspired by the mesh canvas of design software, where you build something step by step. Each question arrives as a dialog bubble, like a chat assistant, and your notes come back as replies.</p></div>
+      <div><span class="label">Why it fits</span><p>The mesh says "you are creating your plan", and the bubbles make the guidance human and approachable, like talking it through with someone who knows the field.</p></div>
+      <div><span class="label">Main elements</span><ul class="els"><li>Grid mesh</li><li>Chat bubbles</li></ul></div>
+      <div><span class="label">Colour palette</span>
+      <div class="sw">
+        <div><i style="background:#faf9f8;box-shadow:inset 0 0 0 1px var(--line)"></i><b>Cloud Petal</b>#FAF9F8 (light ground)</div>
+        <div><i style="background:#150811"></i><b>Noir Fiction</b>#150811 (text, dark ground)</div>
+        <div><i style="background:#beb8cd"></i><b>Wild Lilac</b>#BEB8CD (rules, tags)</div>
+        <div><i style="background:#623b70"></i><b>Heartless</b>#623B70 (labels, dark bubble)</div>
+        <div><i style="background:#531745"></i><b>Violet Carmine</b>#531745 (question bubble, done)</div>
+        <div><i style="background:#aaaaff"></i><b>Shy Moment</b>#AAAAFF (action, current, your replies)</div>
+      </div>
+      </div>
+    </div>
+    <div class="modes">
+      <div class="screen mode-light">
+        <div class="scr tc">
+        
+          <header class="s-head"><span class="s-logo">XR Distribution Toolkit</span>
+            <nav class="s-nav"><span class="s-try">Try it</span><span>Venues &amp; data</span><span>Case studies</span></nav></header>
+          <ol class="s-steps">
+            <li class="done"><i>✓</i><span>Develop<small>Done</small></span></li>
+            <li class="skip"><i>–</i><span>Premiere<small>Skipped · reopen</small></span></li>
+            <li class="cur"><i>3</i><span>Circulate<small>Current</small></span></li>
+            <li class="next"><i>4</i><span>Your plan<small>Any time</small></span></li>
+          </ol>
+          <div class="s-body">
+            <aside class="s-qs"><h6>Circulate · questions</h6>
+              <ul><li class="ok">1 Direct or with support</li><li class="ok">2 Region</li><li class="ok">3 Venues we suggest</li><li class="on">4 What to check</li></ul>
+              <span class="s-link">← Back to Develop</span></aside>
+            <section class="s-q"><h6><span>Question 4 of 4</span><span>Prompt to think with</span></h6><div class="msg">
+              <div class="bubble"><h5>What else should you check before showing at a venue?</h5>
+              <p>A prompt to think with, not a filter. Tick what you still need to find out; it goes into your plan as questions to ask.</p></div></div>
+              <ul class="s-opts"><li class=""><i></i><span>Space: floor area, ceiling height, blackout</span></li><li class=""><i></i><span>Who installs, runs and maintains it</span></li><li class="sel"><i></i><span>Visitors per hour and session length</span></li><li class=""><i></i><span>Fees, and who pays shipping and insurance</span></li><li class=""><i></i><span>Power, internet and whether headsets are supplied</span></li></ul>
+              <div class="s-foot"><span class="s-link">← Back</span><span class="s-cta">See my plan →</span></div></section>
+            <aside class="s-plan"><h6>Your plan</h6>
+              <dl><dt>Required</dt><dd><span class="tag">Visual art</span></dd>
+              <dt>Flexible</dt><dd><span class="tag">Non-headset</span><span class="tag">The general public</span><span class="tag">Europe</span></dd>
+              <dt>To find out</dt><dd class="q"><span class="reply">“A room of about 5 × 4 m and strong internet”</span></dd><dd class="q"><span class="reply">“I'll approach venues myself”</span></dd>
+              <dt>Shortlist</dt><dd class="sl"><b>5</b> suggested venues kept<small>44 venues fit your required answers</small></dd></dl></aside>
+          </div>
+        </div>
+        <div class="cap">Light mode</div>
+      </div>
+      <div class="screen mode-dark">
+        <div class="scr tc">
+        
+          <header class="s-head"><span class="s-logo">XR Distribution Toolkit</span>
+            <nav class="s-nav"><span class="s-try">Try it</span><span>Venues &amp; data</span><span>Case studies</span></nav></header>
+          <ol class="s-steps">
+            <li class="done"><i>✓</i><span>Develop<small>Done</small></span></li>
+            <li class="skip"><i>–</i><span>Premiere<small>Skipped · reopen</small></span></li>
+            <li class="cur"><i>3</i><span>Circulate<small>Current</small></span></li>
+            <li class="next"><i>4</i><span>Your plan<small>Any time</small></span></li>
+          </ol>
+          <div class="s-body">
+            <aside class="s-qs"><h6>Circulate · questions</h6>
+              <ul><li class="ok">1 Direct or with support</li><li class="ok">2 Region</li><li class="ok">3 Venues we suggest</li><li class="on">4 What to check</li></ul>
+              <span class="s-link">← Back to Develop</span></aside>
+            <section class="s-q"><h6><span>Question 4 of 4</span><span>Prompt to think with</span></h6><div class="msg">
+              <div class="bubble"><h5>What else should you check before showing at a venue?</h5>
+              <p>A prompt to think with, not a filter. Tick what you still need to find out; it goes into your plan as questions to ask.</p></div></div>
+              <ul class="s-opts"><li class=""><i></i><span>Space: floor area, ceiling height, blackout</span></li><li class=""><i></i><span>Who installs, runs and maintains it</span></li><li class="sel"><i></i><span>Visitors per hour and session length</span></li><li class=""><i></i><span>Fees, and who pays shipping and insurance</span></li><li class=""><i></i><span>Power, internet and whether headsets are supplied</span></li></ul>
+              <div class="s-foot"><span class="s-link">← Back</span><span class="s-cta">See my plan →</span></div></section>
+            <aside class="s-plan"><h6>Your plan</h6>
+              <dl><dt>Required</dt><dd><span class="tag">Visual art</span></dd>
+              <dt>Flexible</dt><dd><span class="tag">Non-headset</span><span class="tag">The general public</span><span class="tag">Europe</span></dd>
+              <dt>To find out</dt><dd class="q"><span class="reply">“A room of about 5 × 4 m and strong internet”</span></dd><dd class="q"><span class="reply">“I'll approach venues myself”</span></dd>
+              <dt>Shortlist</dt><dd class="sl"><b>5</b> suggested venues kept<small>44 venues fit your required answers</small></dd></dl></aside>
+          </div>
+        </div>
+        <div class="cap">Dark mode</div>
+      </div>
+    </div>
+  </section>
+</div></template>
+<style>#st-host{
+  
+  --a-bg:#ffffff; --a-fg:#141416; --a-muted:#5f5f66; --a-rule:#141416; --a-line:#d3d2cc; --a-accent:#c4311a;
+  --a-coral:#ff5a4e; --a-sun:#ffc23a; --a-violet:#6a4cff; --a-sky:#3aa8f5; --a-mint:#2fc48f; --a-pink:#ff6fcf; --a-cta:#ff4f3f; --a-cta-fg:#ffffff; --a-edge:#ffffff; --a-swipe:50%;
+  
+  --b-bg:#cdeae3; --b-bg2:#a8b6ea; --b-fg:#1d1b4a; --b-muted:#3f4675; --b-surface:#ffffff; --b-surface2:#eceeff; --b-edge:rgba(29,27,74,.12); --b-body:#1d1b4a;
+  --b-card:#f5f4ff; --b-card-fg:#22186e; --b-fg2:#22186e; --b-body0:#2a1fa8; --b-lilac0:#c9c4ff; --b-orchid0:#ff7a8a; --b-blue0:#4a3aff; --b-peri0:#4a3aff; --b-coral:#ff7a8a; --b-peach:#ffb48c; --b-mint0:#b8f7cf; --b-violet:#5546f5; --b-coral-ink:#d23a5c;
+  --b-orchid:#b05ce8; --b-peri:#5252e6; --b-mint:#22d3a6; --b-lilac:#cdb8f5; --b-blue:#2f6fe0; --b-white:#f4f3ff; --b-ink-on:#1d1b4a; --b-glow:rgba(29,27,74,.22);
+  
+  --c-bg:#faf9f8; --c-fg:#150811; --c-muted:#623b70; --c-line:#d9d4e2; --c-tint:#efecf3; --c-mid:#beb8cd; --c-strong:#531745; --c-p1:#beb8cd; --c-p2:#aaaaff; --c-p3:#623b70; --c-p4:#531745; --c-pop:#aaaaff; --c-pop-fg:#150811; --c-mesh:#e4e0ea; --c-bub:#531745; --c-bub-fg:#faf9f8;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) #st-host{
+  --a-bg:#161618; --a-fg:#efeff1; --a-muted:#a2a2aa; --a-rule:#e4e4e8; --a-line:#36363c; --a-accent:#ff7a6e;
+  --a-coral:#ff6a5e; --a-sun:#ffcc4d; --a-violet:#9a85ff; --a-sky:#55b8ff; --a-mint:#4fe3b0; --a-pink:#ff86d8; --a-cta:#ff5a4a; --a-cta-fg:#ffffff; --a-edge:#f5f4f0; --a-swipe:82%;
+  --b-bg:#1d1b4a; --b-bg2:#123a52; --b-fg:#f3f2ff; --b-muted:#c3c4ea; --b-surface:#2b2870; --b-surface2:#363395; --b-edge:rgba(255,255,255,.12); --b-body:#14123a;
+  --b-orchid:#c77dff; --b-peri:#8080ff; --b-mint:#2fe0b8; --b-lilac:#d9c8ff; --b-blue:#5b9bff; --b-white:#f3f2ff; --b-ink-on:#1d1b4a; --b-glow:rgba(5,5,25,.5);
+  --c-bg:#150811; --c-fg:#faf9f8; --c-muted:#beb8cd; --c-line:#3a2440; --c-tint:#22111f; --c-mid:#623b70; --c-strong:#aaaaff; --c-p1:#beb8cd; --c-p2:#aaaaff; --c-p3:#623b70; --c-p4:#531745; --c-pop:#aaaaff; --c-pop-fg:#150811; --c-mesh:#2a1528; --c-bub:#623b70; --c-bub-fg:#faf9f8;
+  color-scheme:dark }}
+:root[data-theme="dark"] #st-host{
+  --a-bg:#161618; --a-fg:#efeff1; --a-muted:#a2a2aa; --a-rule:#e4e4e8; --a-line:#36363c; --a-accent:#ff7a6e;
+  --a-coral:#ff6a5e; --a-sun:#ffcc4d; --a-violet:#9a85ff; --a-sky:#55b8ff; --a-mint:#4fe3b0; --a-pink:#ff86d8; --a-cta:#ff5a4a; --a-cta-fg:#ffffff; --a-edge:#f5f4f0; --a-swipe:82%;
+  --b-bg:#1d1b4a; --b-bg2:#123a52; --b-fg:#f3f2ff; --b-muted:#c3c4ea; --b-surface:#2b2870; --b-surface2:#363395; --b-edge:rgba(255,255,255,.12); --b-body:#14123a;
+  --b-orchid:#c77dff; --b-peri:#8080ff; --b-mint:#2fe0b8; --b-lilac:#d9c8ff; --b-blue:#5b9bff; --b-white:#f3f2ff; --b-ink-on:#1d1b4a; --b-glow:rgba(5,5,25,.5);
+  --c-bg:#150811; --c-fg:#faf9f8; --c-muted:#beb8cd; --c-line:#3a2440; --c-tint:#22111f; --c-mid:#623b70; --c-strong:#aaaaff; --c-p1:#beb8cd; --c-p2:#aaaaff; --c-p3:#623b70; --c-p4:#531745; --c-pop:#aaaaff; --c-pop-fg:#150811; --c-mesh:#2a1528; --c-bub:#623b70; --c-bub-fg:#faf9f8;
+  color-scheme:dark }
+#st-host{--fg:var(--ink);--f-ui:var(--body);--f-mono:var(--mono)}
+</style>
+<script>(()=>{const host=document.getElementById("st-host"),tpl=document.getElementById("st-tpl");if(!host||!tpl||!host.attachShadow)return;const root=host.attachShadow({mode:"open"});root.appendChild(tpl.content.cloneNode(true));
+// Theme B: fold the Circulate question list away and back.
+root.querySelectorAll('.tb .pair').forEach(p=>{
+  const f=p.querySelector('.fold'),u=p.querySelector('.unfold');
+  const set=folded=>{p.classList.toggle('folded',folded);f.setAttribute('aria-expanded',String(!folded));(folded?u:f).focus()};
+  f.addEventListener('click',()=>set(true));u.addEventListener('click',()=>set(false));
+});
+// links between themes: fragment links do not reach inside a shadow root
+root.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const t=root.getElementById(a.getAttribute("href").slice(1));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}));})();</script>
 
 <footer>Prototype for discussion. Venue records come from the research team's Airtable; venue and format groupings are a proposed mapping.</footer>
 
@@ -932,7 +1576,7 @@ if (atEl) {
 }
 
 /* ================= GUIDED JOURNEY ================= */
-/* Follows the Oct 19 user flow: start anywhere, Develop / First showing / Circulate, one shared brief.
+/* Follows the Oct 19 user flow: start anywhere, Develop / Premiere / Circulate, one shared brief.
    Choices narrow the venue list, reflections go to the brief, practical needs become questions for hosts. */
 const jEl = document.getElementById('sk-journey');
 if (jEl) {
@@ -942,14 +1586,14 @@ if (jEl) {
   const FAM={hmd:'Headset-based',nh:'Non-headset installation',ss:'Site-specific or responsive',it:'Immersive performance or event'};
   const CTX={festival:['festival'],venue:['theatre','glam','xr','dome','vrcin'],community:['community'],online:['online']};
   const HOSTS={festival:'Festivals',xr:'Dedicated XR spaces',glam:'Museums, galleries, libraries, archives',theatre:'Theatres and performance spaces',dome:'Fulldomes',online:'Online platforms'};
-  const ENTRY={develop:['Develop an idea or prototype',0],first:['Plan a first public showing',1],circ:['Find another place or way to present a work',2],explore:['Explore venues without a project',null]};
+  const ENTRY={develop:['Develop an idea or prototype',0],first:['Plan a premiere',1],circ:['Find another place or way to present a work',2],explore:['Skip the questions and go straight to venues',null]};
   const FX={
     disc:{t:(v,x)=>FIELDS.discipline.test(v,x),has:v=>v.disc.length>0,keys:DISC,why:()=>'field',gap:'no field recorded'},
     fmt:{t:(v,x)=>FIELDS.fgroup.test(v,x),has:v=>v.fmt.length>0,keys:FAM,why:()=>'format',gap:'no format recorded'},
     fdet:{t:(v,x)=>FIELDS.format.test(v,x),has:v=>v.fmt.length>0,keys:FMT,why:()=>'format',gap:'no format recorded'},
     region:{t:(v,x)=>FIELDS.region.test(v,x),has:()=>true,keys:REGION,why:v=>REGION[v.online?'online':v.cont]},
     hosts:{t:(v,x)=>x.includes(v.type),has:()=>true,keys:HOSTS,why:()=>'host type'},
-    ctx:{t:(v,x)=>x.some(k=>(CTX[k]||[]).includes(v.type)),has:()=>true,keys:CTX,why:()=>'kind of showing'}};
+    ctx:{t:(v,x)=>x.some(k=>(CTX[k]||[]).includes(v.type)),has:()=>true,keys:CTX,why:()=>'kind of premiere'}};
   const FMTQ={kind:'multi',b:'disc',fx:'fmt',opts:{...FAM,none:'Undecided'},sub:'fdet'};
   const STAGES=[
     {label:'Develop', ask:'What am I making, and for whom?', qs:[
@@ -959,11 +1603,11 @@ if (jEl) {
       {id:'ess',short:'What’s essential',text:'What must stay intact, and what could change for another setting?',kind:'need',b:'need',items:{interact:'Participant interaction',site:'A particular site',set:'A physical set',lang:'Language',group:'Number of people together',kit:'Equipment',space:'Minimum space'},kase:'AI & Me: install and touring needs'},
       {id:'welcome',short:'Welcoming the audience',text:'What will help your audience find, enter and understand the work?',kind:'multi',b:'refl',opts:{intro:'Someone to introduce it',onboard:'Onboarding for people new to the tech',lang:'Language versions',access:'Access needs',devices:'Devices or connectivity',guide:'A guide or facilitator',care:'Support before and after'},prompt:'Who might be left out by the current setup?'},
       {id:'partner',short:'Early partners',text:'What kind of partner could help you test or develop this?',kind:'multi',b:'disc',fx:'svc',noMust:true,opts:{prod:'Production or co-commissioning',edu:'Residency or development support',tech:'Technical support',consult:'Advice',host:'An early host',not:'Not looking yet'},leads:true}]},
-    {label:'First showing', skippable:true, ask:'What should the first showing achieve?', qs:[
+    {label:'Premiere', skippable:true, ask:'What should the premiere achieve?', qs:[
       {id:'ready',short:'Readiness',text:'What can you meaningfully show at this point?',kind:'choice',b:'refl',opts:{idea:'An idea or pitch',proto:'A prototype, in a small supported session',wip:'A work in progress, for feedback',done:'A finished version, for the public',und:'Undecided'},prompt:'What needs testing before a larger audience sees it?'},
-      {id:'purpose',short:'Purpose',text:'What would make this first showing worthwhile?',kind:'multi',b:'refl',opts:{test:'Test the audience experience',meet:'Meet presenters or partners',community:'Reach a particular community',visibility:'Visibility or critical discussion',income:'Fees or future bookings'},prompt:'If it brings attention but no next booking, what would still make it useful?',kase:'Ancestors: meeting curators at the first showing'},
-      {id:'ctx',short:'Kind of presentation',text:'What sort of first presentation could serve that purpose?',kind:'multi',b:'disc',fx:'ctx',opts:{festival:'A festival',venue:'A venue exhibition or performance',community:'A community or issue-partner event',online:'An online presentation',session:'A supported prototype session'},prompt:'Who will actually meet the work there?'},
-      {id:'region',short:'Place and timing',text:'Where could you support this showing?',kind:'multi',b:'disc',fx:'region',opts:REGION,prompt:'Would any premiere or exclusivity terms limit where it goes next?'},
+      {id:'purpose',short:'Purpose',text:'What would make this premiere worthwhile?',kind:'multi',b:'refl',opts:{test:'Test the audience experience',meet:'Meet presenters or partners',community:'Reach a particular community',visibility:'Visibility or critical discussion',income:'Fees or future bookings'},prompt:'If it brings attention but no next booking, what would still make it useful?',kase:'Ancestors: meeting curators at the premiere'},
+      {id:'ctx',short:'Kind of presentation',text:'What sort of premiere could serve that purpose?',kind:'multi',b:'disc',fx:'ctx',opts:{festival:'A festival',venue:'A venue exhibition or performance',community:'A community or issue-partner event',online:'An online presentation',session:'A supported prototype session'},prompt:'Who will actually meet the work there?'},
+      {id:'region',short:'Place and timing',text:'Where could you support the premiere?',kind:'multi',b:'disc',fx:'region',opts:REGION,prompt:'Would any premiere or exclusivity terms limit where it goes next?'},
       {id:'cands',short:'Candidates and feasibility',text:'Which of these are worth investigating?',kind:'recs',b:'need',mode:'first'},
       {id:'prep',short:'Preparation',text:'What do you need to prepare or confirm before approaching them?',kind:'checks',b:'need',opts:{desc:'A project description and audience purpose',docs:'Documentation or a build to share',tech:'A technical and access summary',qs:'Specific questions for each place',owner:'Who does the outreach',route:'The official application or contact route'}}]},
     {label:'Circulate', ask:'Where could it go next?', qs:[
@@ -1014,7 +1658,7 @@ if (jEl) {
   function planText(){
     const {g,ess}=brief(), sl=shortlist(), L=(h,a)=>`\n${h}\n${a.length?a.map(x=>'- '+x).join('\n'):'- nothing yet'}`;
     const cq=STAGES[2].qs.find(q=>q.id==='checks'), pq=STAGES[1].qs.find(q=>q.id==='prep');
-    return `MY PLAN · XR Distribution Toolkit\nStarted from: ${ENTRY[j.entry][0]}${j.skipped?'\nFirst showing: skipped':''}\n`
+    return `MY PLAN · XR Distribution Toolkit\nStarted from: ${ENTRY[j.entry][0]}${j.skipped?'\nPremiere: skipped':''}\n`
       +L('INTENTIONS',g.intent)+'\n'+L('MUST FIT',g.must)+'\n'+L('OPEN TO ALTERNATIVES',g.open)+(g.und.length?'\n'+L('UNDECIDED',g.und):'')
       +'\n'+L('ESSENTIAL',ess.ess)+'\n'+L('ADAPTABLE',ess.adapt)
       +'\n'+L('SHORTLIST',sl.map(v=>`${v.name} (${v.city}). ${APPROACH[v.approach]}: ${v.web}`))
@@ -1069,7 +1713,7 @@ if (jEl) {
     } else {
       const s=STAGES[j.stage], qi=j.qi[j.stage], q=s.qs[qi], a=A(q.id), back=j.stage===2&&j.skipped?0:j.stage-1;
       left=`<div><span class="eyebrow">${s.label}</span><span style="font-size:.72rem;color:var(--muted);font-style:italic">${esc(s.ask)}</span>${s.qs.map((x,i)=>`<button class="chip k-ui" style="font-size:.72rem;${i===qi?'border-color:var(--ink)':done(x)?'':'color:var(--muted)'}" data-sk="j-q" data-i="${i}"><i class="sk-dot" style="background:${KIND[x.b][0]}" aria-hidden="true"></i>${done(x)?'✓ ':''}${esc(x.short)}</button>`).join('')}
-        ${s.skippable?`<button class="sk-mini" style="justify-self:start;margin-top:6px" data-sk="j-skip">${j.skipped?'Use this phase again':'Skip First showing'}</button>`:''}
+        ${s.skippable?`<button class="sk-mini" style="justify-self:start;margin-top:6px" data-sk="j-skip">${j.skipped?'Use this phase again':'Skip Premiere'}</button>`:''}
         ${j.stage>0?`<button style="font-size:.72rem;color:var(--accent);margin-top:6px;justify-self:start" data-sk="j-stage" data-i="${back}">← Back to ${STAGES[back].label}</button>`:''}</div>`;
       const btns=(key,opts,kind)=>`<div class="ans" role="${kind==='multi'?'group':'radiogroup'}">${Object.entries(opts).map(([k,l])=>`<button class="ans-btn ${A(key).v.includes(k)?'sel':''}" role="${kind==='multi'?'checkbox':'radio'}" aria-checked="${A(key).v.includes(k)}" data-sk="j-ans" data-key="${key}" data-kind="${kind}" data-val="${k}">${esc(l)}</button>`).join('')}</div>`;
       const note=(key,ph)=>`<textarea class="sk-note" id="sk-note-${key}" data-skn="${key}" aria-label="${esc(ph)}" placeholder="${esc(ph)}">${esc(A(key).n)}</textarea>`;
